@@ -5,53 +5,57 @@ const metrics = ["I","M"];
 const apartments1 = [{Selector:"Select Appartment"},
 {Apartment:"APTO-1A",Price:[123100.00],Available:"Sold",Area_Apparment:"72.00",Area_Terrace:"34",Rooms:"1",Bathrooms:"1",Parking_Space:"1"
 ,Living_Dining:"23.50",Kitchen:"12.50",Main_Bedroom:"19.90",Second_Bedroom:"",Third_Bedroom:"",Other_Areas:"16.10",Total_Area:"72"},
-{Apartment:"APTO-1B",Price:[172600.00],Available:"Sold",Area_Apparment:"72.00",Area_Terrace:"34",Rooms:"1",Bathrooms:"1",Parking_Space:"1"
+{Apartment:"APTO-1B",Price:[172600.00],Available:"Sold",Area_Apparment:"94.00",Area_Terrace:"66",Rooms:"2",Bathrooms:"2",Parking_Space:"2"
 ,Living_Dining:"23.50",Kitchen:"12.50",Main_Bedroom:"19.90",Second_Bedroom:"",Third_Bedroom:"",Other_Areas:"16.10",Total_Area:"72"},
-{Apartment:"APTO-1C",Price:[206150.00],Available:"Available",Area_Apparment:"72.00",Area_Terrace:"34",Rooms:"1",Bathrooms:"1",Parking_Space:"1"
+{Apartment:"APTO-1C",Price:[206150.00],Available:"Available",Area_Apparment:"116.00",Area_Terrace:"69",Rooms:"3",Bathrooms:"2",Parking_Space:"2"
 ,Living_Dining:"23.50",Kitchen:"12.50",Main_Bedroom:"19.90",Second_Bedroom:"",Third_Bedroom:"",Other_Areas:"16.10",Total_Area:"72"},
-{Apartment:"APTO-1D",Price:[187290.00],Available:"Available",Area_Apparment:"72.00",Area_Terrace:"34",Rooms:"1",Bathrooms:"1",Parking_Space:"1"
+{Apartment:"APTO-1D",Price:[187290.00],Available:"Available",Area_Apparment:"108.00",Area_Terrace:"55.80",Rooms:"2",Bathrooms:"2",Parking_Space:"2"
 ,Living_Dining:"23.50",Kitchen:"12.50",Main_Bedroom:"19.90",Second_Bedroom:"",Third_Bedroom:"",Other_Areas:"16.10",Total_Area:"72"},
-{Apartment:"APTO-1E",Price:[170950.00],Available:"Available",Area_Apparment:"72.00",Area_Terrace:"34",Rooms:"1",Bathrooms:"1",Parking_Space:"1"
+{Apartment:"APTO-1E",Price:[170950.00],Available:"Available",Area_Apparment:"94.00",Area_Terrace:"63",Rooms:"2",Bathrooms:"2",Parking_Space:"2"
 ,Living_Dining:"23.50",Kitchen:"12.50",Main_Bedroom:"19.90",Second_Bedroom:"",Third_Bedroom:"",Other_Areas:"16.10",Total_Area:"72"},
-{Apartment:"APTO-1F",Price:[122000.00],Available:"Available",Area_Apparment:"72.00",Area_Terrace:"34",Rooms:"1",Bathrooms:"1",Parking_Space:"1"
+{Apartment:"APTO-1F",Price:[122000.00],Available:"Available",Area_Apparment:"72.00",Area_Terrace:"32",Rooms:"1",Bathrooms:"1",Parking_Space:"1"
 ,Living_Dining:"23.50",Kitchen:"12.50",Main_Bedroom:"19.90",Second_Bedroom:"",Third_Bedroom:"",Other_Areas:"16.10",Total_Area:"72"},
-{Apartment:"APTO-2A",Price:[106578.00],Available:"Available",Area_Apparment:"72.00",Area_Terrace:"34",Rooms:"1",Bathrooms:"1",Parking_Space:"1"
+{Apartment:"APTO-2A",Price:[106578.00],Available:"Available",Area_Apparment:"72.00",Area_Terrace:"6.60",Rooms:"1",Bathrooms:"1",Parking_Space:"1"
 ,Living_Dining:"23.50",Kitchen:"12.50",Main_Bedroom:"19.90",Second_Bedroom:"",Third_Bedroom:"",Other_Areas:"16.10",Total_Area:"72"},
-{Apartment:"APTO-2B",Price:[136300.00],Available:"Available",Area_Apparment:"72.00",Area_Terrace:"34",Rooms:"1",Bathrooms:"1",Parking_Space:"1"
+{Apartment:"APTO-2B",Price:[136300.00],Available:"Available",Area_Apparment:"94.00",Area_Terrace:"0",Rooms:"2",Bathrooms:"2",Parking_Space:"2"
 ,Living_Dining:"23.50",Kitchen:"12.50",Main_Bedroom:"19.90",Second_Bedroom:"",Third_Bedroom:"",Other_Areas:"16.10",Total_Area:"72"},
-{Apartment:"APTO-2C",Price:[171005.00],Available:"Available",Area_Apparment:"72.00",Area_Terrace:"34",Rooms:"1",Bathrooms:"1",Parking_Space:"1"
+{Apartment:"APTO-2C",Price:[171005.00],Available:"Available",Area_Apparment:"116.00",Area_Terrace:"8.50",Rooms:"3",Bathrooms:"2",Parking_Space:"2"
 ,Living_Dining:"23.50",Kitchen:"12.50",Main_Bedroom:"19.90",Second_Bedroom:"",Third_Bedroom:"",Other_Areas:"16.10",Total_Area:"72"},
-{Apartment:"APTO-2D",Price:[145940.00],Available:"Available",Area_Apparment:"72.00",Area_Terrace:"34",Rooms:"1",Bathrooms:"1",Parking_Space:"1"
+{Apartment:"APTO-2D",Price:[145940.00],Available:"Available",Area_Apparment:"92.00",Area_Terrace:"38",Rooms:"2",Bathrooms:"2",Parking_Space:"2"
 ,Living_Dining:"23.50",Kitchen:"12.50",Main_Bedroom:"19.90",Second_Bedroom:"",Third_Bedroom:"",Other_Areas:"16.10",Total_Area:"72"},
-{Apartment:"APTO-2E",Price:[136300.00],Available:"Available",Area_Apparment:"72.00",Area_Terrace:"34",Rooms:"1",Bathrooms:"1",Parking_Space:"1"
+{Apartment:"APTO-2E",Price:[136300.00],Available:"Available",Area_Apparment:"94.00",Area_Terrace:"0",Rooms:"2",Bathrooms:"2",Parking_Space:"2"
 ,Living_Dining:"23.50",Kitchen:"12.50",Main_Bedroom:"19.90",Second_Bedroom:"",Third_Bedroom:"",Other_Areas:"16.10",Total_Area:"72"},
-{Apartment:"APTO-2F",Price:[106578.00],Available:"Sold",Area_Apparment:"72.00",Area_Terrace:"34",Rooms:"1",Bathrooms:"1",Parking_Space:"1"
+{Apartment:"APTO-2F",Price:[106578.00],Available:"Sold",Area_Apparment:"72.00",Area_Terrace:"6.60",Rooms:"1",Bathrooms:"1",Parking_Space:"1"
 ,Living_Dining:"23.50",Kitchen:"12.50",Main_Bedroom:"19.90",Second_Bedroom:"",Third_Bedroom:"",Other_Areas:"16.10",Total_Area:"72"},
-{Apartment:"APTO-3A",Price:[104400.00],Available:"Available",Area_Apparment:"72.00",Area_Terrace:"34",Rooms:"1",Bathrooms:"1",Parking_Space:"1"
+{Apartment:"APTO-3A",Price:[104400.00],Available:"Available",Area_Apparment:"72.00",Area_Terrace:"0",Rooms:"1",Bathrooms:"1",Parking_Space:"1"
 ,Living_Dining:"23.50",Kitchen:"12.50",Main_Bedroom:"19.90",Second_Bedroom:"",Third_Bedroom:"",Other_Areas:"16.10",Total_Area:"72"},
-{Apartment:"APTO-3B",Price:[139600.00],Available:"Available",Area_Apparment:"72.00",Area_Terrace:"34",Rooms:"1",Bathrooms:"1",Parking_Space:"1"
+{Apartment:"APTO-3B",Price:[139600.00],Available:"Available",Area_Apparment:"94.00",Area_Terrace:"10",Rooms:"2",Bathrooms:"2",Parking_Space:"2"
 ,Living_Dining:"23.50",Kitchen:"12.50",Main_Bedroom:"19.90",Second_Bedroom:"",Third_Bedroom:"",Other_Areas:"16.10",Total_Area:"72"},
-{Apartment:"APTO-3C",Price:[168200.00],Available:"Available",Area_Apparment:"72.00",Area_Terrace:"34",Rooms:"1",Bathrooms:"1",Parking_Space:"1"
+{Apartment:"APTO-3C",Price:[168200.00],Available:"Available",Area_Apparment:"116.00",Area_Terrace:"0",Rooms:"3",Bathrooms:"2",Parking_Space:"2"
 ,Living_Dining:"23.50",Kitchen:"12.50",Main_Bedroom:"19.90",Second_Bedroom:"",Third_Bedroom:"",Other_Areas:"16.10",Total_Area:"72"},
-{Apartment:"APTO-3D",Price:[133400.00],Available:"Available",Area_Apparment:"72.00",Area_Terrace:"34",Rooms:"1",Bathrooms:"1",Parking_Space:"1"
+{Apartment:"APTO-3D",Price:[133400.00],Available:"Available",Area_Apparment:"92.00",Area_Terrace:"0",Rooms:"2",Bathrooms:"2",Parking_Space:"2"
 ,Living_Dining:"23.50",Kitchen:"12.50",Main_Bedroom:"19.90",Second_Bedroom:"",Third_Bedroom:"",Other_Areas:"16.10",Total_Area:"72"},
-{Apartment:"APTO-3E",Price:[139600.00],Available:"Available",Area_Apparment:"72.00",Area_Terrace:"34",Rooms:"1",Bathrooms:"1",Parking_Space:"1"
+{Apartment:"APTO-3E",Price:[139600.00],Available:"Available",Area_Apparment:"94.00",Area_Terrace:"10",Rooms:"2",Bathrooms:"2",Parking_Space:"2"
 ,Living_Dining:"23.50",Kitchen:"12.50",Main_Bedroom:"19.90",Second_Bedroom:"",Third_Bedroom:"",Other_Areas:"16.10",Total_Area:"72"},
-{Apartment:"APTO-3F",Price:[104400.00],Available:"Available",Area_Apparment:"72.00",Area_Terrace:"34",Rooms:"1",Bathrooms:"1",Parking_Space:"1"
+{Apartment:"APTO-3F",Price:[104400.00],Available:"Available",Area_Apparment:"72.00",Area_Terrace:"0",Rooms:"1",Bathrooms:"1",Parking_Space:"1"
 ,Living_Dining:"23.50",Kitchen:"12.50",Main_Bedroom:"19.90",Second_Bedroom:"",Third_Bedroom:"",Other_Areas:"16.10",Total_Area:"72"},
-{Apartment:"APTO-4A",Price:[104400.00],Available:"Sold",Area_Apparment:"72.00",Area_Terrace:"34",Rooms:"1",Bathrooms:"1",Parking_Space:"1"
+{Apartment:"APTO-4A",Price:[104400.00],Available:"Sold",Area_Apparment:"72.00",Area_Terrace:"0",Rooms:"1",Bathrooms:"1",Parking_Space:"1"
 ,Living_Dining:"23.50",Kitchen:"12.50",Main_Bedroom:"19.90",Second_Bedroom:"",Third_Bedroom:"",Other_Areas:"16.10",Total_Area:"72"},
-{Apartment:"APTO-4B",Price:[138148.00],Available:"Sold",Area_Apparment:"72.00",Area_Terrace:"34",Rooms:"1",Bathrooms:"1",Parking_Space:"1"
+{Apartment:"APTO-4B",Price:[138148.00],Available:"Sold",Area_Apparment:"94.00",Area_Terrace:"5.60",Rooms:"2",Bathrooms:"2",Parking_Space:"2"
 ,Living_Dining:"23.50",Kitchen:"12.50",Main_Bedroom:"19.90",Second_Bedroom:"",Third_Bedroom:"",Other_Areas:"16.10",Total_Area:"72"},
-{Apartment:"APTO-4C",Price:[170048.00],Available:"Sold",Area_Apparment:"72.00",Area_Terrace:"34",Rooms:"1",Bathrooms:"1",Parking_Space:"1"
+{Apartment:"APTO-4C",Price:[170048.00],Available:"Sold",Area_Apparment:"116.00",Area_Terrace:"5.60",Rooms:"3",Bathrooms:"2",Parking_Space:"2"
 ,Living_Dining:"23.50",Kitchen:"12.50",Main_Bedroom:"19.90",Second_Bedroom:"",Third_Bedroom:"",Other_Areas:"16.10",Total_Area:"72"},
-{Apartment:"APTO-4D",Price:[139274.00],Available:"Available",Area_Apparment:"72.00",Area_Terrace:"34",Rooms:"1",Bathrooms:"1",Parking_Space:"1"
+{Apartment:"APTO-4D",Price:[139274.00],Available:"Available",Area_Apparment:"92.00",Area_Terrace:"17.80",Rooms:"2",Bathrooms:"2",Parking_Space:"2"
 ,Living_Dining:"23.50",Kitchen:"12.50",Main_Bedroom:"19.90",Second_Bedroom:"",Third_Bedroom:"",Other_Areas:"16.10",Total_Area:"72"},
-{Apartment:"APTO-4E",Price:[138148.00],Available:"Available",Area_Apparment:"72.00",Area_Terrace:"34",Rooms:"1",Bathrooms:"1",Parking_Space:"1"
+{Apartment:"APTO-4E",Price:[138148.00],Available:"Available",Area_Apparment:"94.00",Area_Terrace:"5.60",Rooms:"2",Bathrooms:"2",Parking_Space:"2"
 ,Living_Dining:"23.50",Kitchen:"12.50",Main_Bedroom:"19.90",Second_Bedroom:"",Third_Bedroom:"",Other_Areas:"16.10",Total_Area:"72"},
-{Apartment:"APTO-4F",Price:[104400.00],Available:"Available",Area_Apparment:"72.00",Area_Terrace:"34",Rooms:"1",Bathrooms:"1",Parking_Space:"1"
+{Apartment:"APTO-4F",Price:[104400.00],Available:"Available",Area_Apparment:"72.00",Area_Terrace:"0",Rooms:"1",Bathrooms:"1",Parking_Space:"1"
 ,Living_Dining:"23.50",Kitchen:"12.50",Main_Bedroom:"19.90",Second_Bedroom:"",Third_Bedroom:"",Other_Areas:"16.10",Total_Area:"72"}]
-
+const apartments2 = apartments1;
+const apartments3 = apartments1;
+const apartments4 = apartments1;
+const apartments5 = apartments1;
+const apartments6 = apartments1;
 
 console.log(apartments1);
 let select = document.getElementById("metric");
@@ -390,42 +394,54 @@ function sendBuilding() {
     console.log("entre1");
    }
    if ( answer == 2 ){
-    myFunctionAp( appartments2 , Apartment ) ;
+    myFunctionAp( apartments2 , Apartment ) ;
     console.log("entre2");
    }
    if ( answer == 3 ){
-    myFunctionAp( appartments3 , Apartment ) ;
+    myFunctionAp( apartments3 , Apartment ) ;
     console.log("entre3");
    }
    if ( answer == 4 ){
-    myFunctionAp( appartments4 , Apartment ) ;
+    myFunctionAp( apartments4 , Apartment ) ;
     console.log("entre4"); 
    }
    if ( answer == 5 ){
-    myFunctionAp( appartments5 , Apartment ) ; 
+    myFunctionAp( apartments5 , Apartment ) ; 
     console.log("entre5");
    }
    if ( answer == 6 ){
-    myFunctionAp( appartments6 , Apartment ) ; 
+    myFunctionAp( apartments6 , Apartment ) ; 
     console.log("entre6");
 }
 }
 function calculation(percentage){
 
-    if ((document.getElementById('price').value != null) || (document.getElementById('price').value != "")){
-        var cash = (((document.getElementById('price').value) * percentage)/100);
-        var balance_finance = ((document.getElementById('price').value)-cash);
-        console.log("CALCULATION"+(((document.getElementById('price').value) * percentage))/100);
-        document.getElementById('advance_cash').value = cash;
-        document.getElementById('advance_cash').innerHTML = Intl.NumberFormat('en-US', {currency:"USD" , style: 'currency'}).format(cash);
-        document.getElementById('balance_to_finance').value = balance_finance;
-        document.getElementById('balance_to_finance').innerHTML = Intl.NumberFormat('en-US', {currency:"USD" , style: 'currency'}).format(balance_finance);
-        /*document.getElementById('capital').value = balance_finance;
-        document.getElementById('capital').innerHTML = Intl.NumberFormat('en-US', {currency:"USD" , style: 'currency'}).format(balance_finance);
-        */
-
-    }else{
-        alert("You need to select the building and the apartment");
-    }
+    
+        if ((document.getElementById('price').value != null) && (document.getElementById('price').value != "")){
+            if(percentage <= 100 && percentage >= 0){
+            var cash = (((document.getElementById('price').value) * percentage)/100);
+            var balance_finance = ((document.getElementById('price').value)-cash);
+            console.log("CALCULATION"+(((document.getElementById('price').value) * percentage))/100);
+            document.getElementById('advance_cash').value = cash;
+            document.getElementById('advance_cash').innerHTML = Intl.NumberFormat('en-US', {currency:"USD" , style: 'currency'}).format(cash);
+            document.getElementById('balance_to_finance').value = balance_finance;
+            document.getElementById('balance_to_finance').innerHTML = Intl.NumberFormat('en-US', {currency:"USD" , style: 'currency'}).format(balance_finance);
+            /*document.getElementById('capital').value = balance_finance;
+            document.getElementById('capital').innerHTML = Intl.NumberFormat('en-US', {currency:"USD" , style: 'currency'}).format(balance_finance);
+            */
+            }else{
+                document.getElementById('advance_percentage').value = "";
+                document.getElementById('advance_percentage').innerHTML = "";
+                document.getElementById('advance_cash').value = "";
+                document.getElementById('advance_cash').innerHTML = "";
+                document.getElementById('balance_to_finance').value = "";
+                document.getElementById('balance_to_finance').innerHTML = "";
+            
+                alert("You need to write a valid percentage");
+            }
+        }else{
+            alert("You need to select the building and the apartment");
+        }
+    
 
 }
