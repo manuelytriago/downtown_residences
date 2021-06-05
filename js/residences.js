@@ -131,11 +131,17 @@ function myFunctionAp( array , element ) {
             document.getElementById('total_investment').innerHTML = Intl.NumberFormat('en-US', {currency:"USD" , style: 'currency'}).format(apartments1[i].Price);
             
             if ( (document.getElementById("metric").value) == 'M'){
+
+                document.getElementById('area_in').value = "area_in";
+                document.getElementById('area_in').innerHTML = "Area in Meters";
                 document.getElementById('area_apartment').value = apartments1[i].Area_Apparment;
                 document.getElementById('area_apartment').innerHTML = apartments1[i].Area_Apparment;
                 document.getElementById('area_terrace').value = apartments1[i].Area_Terrace;
                 document.getElementById('area_terrace').innerHTML = apartments1[i].Area_Terrace;
             }else{
+
+                document.getElementById('area_in').value = "area_in";
+                document.getElementById('area_in').innerHTML = "Area in Square Feet";
                 document.getElementById('area_apartment').value = Math.round(((apartments1[i].Area_Apparment)*10.7639).toFixed(2));
                 document.getElementById('area_apartment').innerHTML = Math.round(((apartments1[i].Area_Apparment)*10.7639).toFixed(2));
                 document.getElementById('area_terrace').value = Math.round(((apartments1[i].Area_Terrace)*10.7639).toFixed(2));
@@ -414,6 +420,31 @@ function sendBuilding() {
     console.log("entre6");
 }
 }
+let numero = 60;
+let finance = 87564;
+let amortization =  (finance / numero).toFixed(2);
+let interest1 = (((finance * (2/12).toFixed(8))/100).toFixed(2));
+let pago = (parseInt(amortization,10) +parseInt(interest1,10));
+console.log("Amortizacion = "+amortization );
+console.log("Pago 1 = "+pago );
+
+function interestAccrued(numero,interest,finance,amortization,pago){
+  
+    if (numero === 0) {
+        return 0;
+    } else {
+        interest = ((finance * (2/12).toFixed(8))/100).toFixed(2);
+        pago = (parseInt(amortization,10) +parseInt(interest,10));
+        finance = (finance-pago);
+        console.log("interest "+numero+" = "+interest ) ;
+        console.log("finance "+numero+" = "+finance ) ;
+
+        return interest + interestAccrued(--numero,interest,finance,pago);
+    }
+    
+
+}
+console.log(interestAccrued(numero,0,finance,amortization,pago)) ;
 function calculation(percentage){
 
     
