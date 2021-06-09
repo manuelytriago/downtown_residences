@@ -913,22 +913,25 @@ td {
 }
 
 .blue_background {
-background-color: steelblue;
+background-color:  #007EC3;
 color: white;
 }
 .black_background{
     background-color:black;
     color: white;  
 } 
+
 .light_blue_background{
-    background-color:skyblue;
+   text-align: center;
+    background-color: #007EC3;
     color: white;  
+    background-color: lighten
 }   
 .silver_background{
     background-color:darkgrey;
 } 
 .blue_text{
-    color: darkblue;
+    color: #007EC3;
     font-weight: bold;
 } 
 

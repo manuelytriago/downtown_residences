@@ -3,81 +3,77 @@ const buildingsPt = [{Selector:"Select Building",unlock:true},
     {Building:4,unlock:false},{Building:5,unlock:false},{Building:6,unlock:false}];
 const metrics = ["I","M"];
 const apartments1 = [{Selector:"Select Appartment"},
-{Apartment:"APTO-1A",Price:[123100.00],Available:"Sold",Area_Apparment:"72.00",Area_Terrace:"34",Rooms:"1",Bathrooms:"1",Parking_Space:"1"
-,Living_Dining:"23.50",Kitchen:"12.50",Main_Bedroom:"19.90",Second_Bedroom:"",Third_Bedroom:"",Other_Areas:"16.10",Total_Area:"72"},
-{Apartment:"APTO-1B",Price:[172600.00],Available:"Sold",Area_Apparment:"94.00",Area_Terrace:"66",Rooms:"2",Bathrooms:"2",Parking_Space:"2"
-,Living_Dining:"23.50",Kitchen:"12.50",Main_Bedroom:"19.90",Second_Bedroom:"",Third_Bedroom:"",Other_Areas:"16.10",Total_Area:"72"},
-{Apartment:"APTO-1C",Price:[206150.00],Available:"Available",Area_Apparment:"116.00",Area_Terrace:"69",Rooms:"3",Bathrooms:"2",Parking_Space:"2"
-,Living_Dining:"23.50",Kitchen:"12.50",Main_Bedroom:"19.90",Second_Bedroom:"",Third_Bedroom:"",Other_Areas:"16.10",Total_Area:"72"},
+{Apartment:"APTO-1A",Price:[123100.00],Available:"Sold",Area_Apparment:"72.00",Area_Terrace:"34.00",Rooms:"1",Bathrooms:"1",Parking_Space:"1"
+,Living_Dining:"23.50",Kitchen:"12.50",Main_Bedroom:"19.90",Second_Bedroom:"",Third_Bedroom:"",Other_Areas:"16.10",Total_Area:"72",Facing: "Terrace is facing the pool"},
+{Apartment:"APTO-1B",Price:[172600.00],Available:"Sold",Area_Apparment:"94.00",Area_Terrace:"66.00",Rooms:"2",Bathrooms:"2",Parking_Space:"2"
+,Living_Dining:"18.22",Kitchen:"12.37",Main_Bedroom:"19.83",Second_Bedroom:"17.70",Third_Bedroom:"",Other_Areas:"25.88",Total_Area:"94",Facing: "Terrace is facing the pool"},
+{Apartment:"APTO-1C",Price:[206150.00],Available:"Available",Area_Apparment:"116.00",Area_Terrace:"69.00",Rooms:"3",Bathrooms:"2",Parking_Space:"2"
+,Living_Dining:"29.17.",Kitchen:"9.68",Main_Bedroom:"16.58",Second_Bedroom:"15.80",Third_Bedroom:"15.13",Other_Areas:"29.64",Total_Area:"116",Facing: "Terrace is facing the pool"},
 {Apartment:"APTO-1D",Price:[187290.00],Available:"Available",Area_Apparment:"108.00",Area_Terrace:"55.80",Rooms:"2",Bathrooms:"2",Parking_Space:"2"
-,Living_Dining:"23.50",Kitchen:"12.50",Main_Bedroom:"19.90",Second_Bedroom:"",Third_Bedroom:"",Other_Areas:"16.10",Total_Area:"72"},
-{Apartment:"APTO-1E",Price:[170950.00],Available:"Available",Area_Apparment:"94.00",Area_Terrace:"63",Rooms:"2",Bathrooms:"2",Parking_Space:"2"
-,Living_Dining:"23.50",Kitchen:"12.50",Main_Bedroom:"19.90",Second_Bedroom:"",Third_Bedroom:"",Other_Areas:"16.10",Total_Area:"72"},
-{Apartment:"APTO-1F",Price:[122000.00],Available:"Available",Area_Apparment:"72.00",Area_Terrace:"32",Rooms:"1",Bathrooms:"1",Parking_Space:"1"
-,Living_Dining:"23.50",Kitchen:"12.50",Main_Bedroom:"19.90",Second_Bedroom:"",Third_Bedroom:"",Other_Areas:"16.10",Total_Area:"72"},
+,Living_Dining:"24.25",Kitchen:"12.41",Main_Bedroom:"17.97",Second_Bedroom:"17.02",Third_Bedroom:"",Other_Areas:"36.35",Total_Area:"108",Facing: "Terrace is facing its surroundings"},
+{Apartment:"APTO-1E",Price:[170950.00],Available:"Available",Area_Apparment:"94.00",Area_Terrace:"63.00",Rooms:"2",Bathrooms:"2",Parking_Space:"2"
+,Living_Dining:"18.22",Kitchen:"12.37",Main_Bedroom:"19.83",Second_Bedroom:"17.70",Third_Bedroom:"",Other_Areas:"25.88",Total_Area:"94",Facing: "Terrace is facing its surroundings"},
+{Apartment:"APTO-1F",Price:[122000.00],Available:"Available",Area_Apparment:"72.00",Area_Terrace:"32.00",Rooms:"1",Bathrooms:"1",Parking_Space:"1"
+,Living_Dining:"23.50",Kitchen:"12.50",Main_Bedroom:"19.90",Second_Bedroom:"",Third_Bedroom:"",Other_Areas:"16.10",Total_Area:"72",Facing: "Terrace is facing its surroundings"},
 {Apartment:"APTO-2A",Price:[106578.00],Available:"Available",Area_Apparment:"72.00",Area_Terrace:"6.60",Rooms:"1",Bathrooms:"1",Parking_Space:"1"
-,Living_Dining:"23.50",Kitchen:"12.50",Main_Bedroom:"19.90",Second_Bedroom:"",Third_Bedroom:"",Other_Areas:"16.10",Total_Area:"72"},
-{Apartment:"APTO-2B",Price:[136300.00],Available:"Available",Area_Apparment:"94.00",Area_Terrace:"0",Rooms:"2",Bathrooms:"2",Parking_Space:"2"
-,Living_Dining:"23.50",Kitchen:"12.50",Main_Bedroom:"19.90",Second_Bedroom:"",Third_Bedroom:"",Other_Areas:"16.10",Total_Area:"72"},
+,Living_Dining:"23.50",Kitchen:"12.50",Main_Bedroom:"19.90",Second_Bedroom:"",Third_Bedroom:"",Other_Areas:"16.10",Total_Area:"72",Facing: "Balcony is facing the pool"},
+{Apartment:"APTO-2B",Price:[136300.00],Available:"Available",Area_Apparment:"94.00",Area_Terrace:"0.00",Rooms:"2",Bathrooms:"2",Parking_Space:"2"
+,Living_Dining:"18.22",Kitchen:"12.37",Main_Bedroom:"19.83",Second_Bedroom:"17.70",Third_Bedroom:"",Other_Areas:"25.88",Total_Area:"94",Facing: "Balcony is facing the pool"},
 {Apartment:"APTO-2C",Price:[171005.00],Available:"Available",Area_Apparment:"116.00",Area_Terrace:"8.50",Rooms:"3",Bathrooms:"2",Parking_Space:"2"
-,Living_Dining:"23.50",Kitchen:"12.50",Main_Bedroom:"19.90",Second_Bedroom:"",Third_Bedroom:"",Other_Areas:"16.10",Total_Area:"72"},
-{Apartment:"APTO-2D",Price:[145940.00],Available:"Available",Area_Apparment:"92.00",Area_Terrace:"38",Rooms:"2",Bathrooms:"2",Parking_Space:"2"
-,Living_Dining:"23.50",Kitchen:"12.50",Main_Bedroom:"19.90",Second_Bedroom:"",Third_Bedroom:"",Other_Areas:"16.10",Total_Area:"72"},
-{Apartment:"APTO-2E",Price:[136300.00],Available:"Available",Area_Apparment:"94.00",Area_Terrace:"0",Rooms:"2",Bathrooms:"2",Parking_Space:"2"
-,Living_Dining:"23.50",Kitchen:"12.50",Main_Bedroom:"19.90",Second_Bedroom:"",Third_Bedroom:"",Other_Areas:"16.10",Total_Area:"72"},
+,Living_Dining:"29.17.",Kitchen:"9.68",Main_Bedroom:"16.58",Second_Bedroom:"15.80",Third_Bedroom:"15.13",Other_Areas:"29.64",Total_Area:"116",Facing: "Balcony is facing the pool"},
+{Apartment:"APTO-2D",Price:[145940.00],Available:"Available",Area_Apparment:"92.00",Area_Terrace:"38.00",Rooms:"2",Bathrooms:"2",Parking_Space:"2"
+,Living_Dining:"18.86",Kitchen:"12.41",Main_Bedroom:"13.35",Second_Bedroom:"13.71",Third_Bedroom:"",Other_Areas:"33.67",Total_Area:"92",Facing: "Balcony is facing its surroundings"},
+{Apartment:"APTO-2E",Price:[136300.00],Available:"Available",Area_Apparment:"94.00",Area_Terrace:"0.00",Rooms:"2",Bathrooms:"2",Parking_Space:"2"
+,Living_Dining:"18.22",Kitchen:"12.37",Main_Bedroom:"19.83",Second_Bedroom:"17.70",Third_Bedroom:"",Other_Areas:"25.88",Total_Area:"94",Facing: "Balcony is facing its surroundings"},
 {Apartment:"APTO-2F",Price:[106578.00],Available:"Sold",Area_Apparment:"72.00",Area_Terrace:"6.60",Rooms:"1",Bathrooms:"1",Parking_Space:"1"
-,Living_Dining:"23.50",Kitchen:"12.50",Main_Bedroom:"19.90",Second_Bedroom:"",Third_Bedroom:"",Other_Areas:"16.10",Total_Area:"72"},
-{Apartment:"APTO-3A",Price:[104400.00],Available:"Available",Area_Apparment:"72.00",Area_Terrace:"0",Rooms:"1",Bathrooms:"1",Parking_Space:"1"
-,Living_Dining:"23.50",Kitchen:"12.50",Main_Bedroom:"19.90",Second_Bedroom:"",Third_Bedroom:"",Other_Areas:"16.10",Total_Area:"72"},
-{Apartment:"APTO-3B",Price:[139600.00],Available:"Available",Area_Apparment:"94.00",Area_Terrace:"10",Rooms:"2",Bathrooms:"2",Parking_Space:"2"
-,Living_Dining:"23.50",Kitchen:"12.50",Main_Bedroom:"19.90",Second_Bedroom:"",Third_Bedroom:"",Other_Areas:"16.10",Total_Area:"72"},
-{Apartment:"APTO-3C",Price:[168200.00],Available:"Available",Area_Apparment:"116.00",Area_Terrace:"0",Rooms:"3",Bathrooms:"2",Parking_Space:"2"
-,Living_Dining:"23.50",Kitchen:"12.50",Main_Bedroom:"19.90",Second_Bedroom:"",Third_Bedroom:"",Other_Areas:"16.10",Total_Area:"72"},
-{Apartment:"APTO-3D",Price:[133400.00],Available:"Available",Area_Apparment:"92.00",Area_Terrace:"0",Rooms:"2",Bathrooms:"2",Parking_Space:"2"
-,Living_Dining:"23.50",Kitchen:"12.50",Main_Bedroom:"19.90",Second_Bedroom:"",Third_Bedroom:"",Other_Areas:"16.10",Total_Area:"72"},
-{Apartment:"APTO-3E",Price:[139600.00],Available:"Available",Area_Apparment:"94.00",Area_Terrace:"10",Rooms:"2",Bathrooms:"2",Parking_Space:"2"
-,Living_Dining:"23.50",Kitchen:"12.50",Main_Bedroom:"19.90",Second_Bedroom:"",Third_Bedroom:"",Other_Areas:"16.10",Total_Area:"72"},
-{Apartment:"APTO-3F",Price:[104400.00],Available:"Available",Area_Apparment:"72.00",Area_Terrace:"0",Rooms:"1",Bathrooms:"1",Parking_Space:"1"
-,Living_Dining:"23.50",Kitchen:"12.50",Main_Bedroom:"19.90",Second_Bedroom:"",Third_Bedroom:"",Other_Areas:"16.10",Total_Area:"72"},
-{Apartment:"APTO-4A",Price:[104400.00],Available:"Sold",Area_Apparment:"72.00",Area_Terrace:"0",Rooms:"1",Bathrooms:"1",Parking_Space:"1"
-,Living_Dining:"23.50",Kitchen:"12.50",Main_Bedroom:"19.90",Second_Bedroom:"",Third_Bedroom:"",Other_Areas:"16.10",Total_Area:"72"},
+,Living_Dining:"23.50",Kitchen:"12.50",Main_Bedroom:"19.90",Second_Bedroom:"",Third_Bedroom:"",Other_Areas:"16.10",Total_Area:"72",Facing: "Balcony is facing its surroundings"},
+{Apartment:"APTO-3A",Price:[104400.00],Available:"Available",Area_Apparment:"72.00",Area_Terrace:"0.00",Rooms:"1",Bathrooms:"1",Parking_Space:"1"
+,Living_Dining:"23.50",Kitchen:"12.50",Main_Bedroom:"19.90",Second_Bedroom:"",Third_Bedroom:"",Other_Areas:"16.10",Total_Area:"72",Facing: "Balcony is facing the pool"},
+{Apartment:"APTO-3B",Price:[139600.00],Available:"Available",Area_Apparment:"94.00",Area_Terrace:"10.00",Rooms:"2",Bathrooms:"2",Parking_Space:"2"
+,Living_Dining:"18.22",Kitchen:"12.37",Main_Bedroom:"19.83",Second_Bedroom:"17.70",Third_Bedroom:"",Other_Areas:"25.88",Total_Area:"94",Facing: "Balcony is facing the pool"},
+{Apartment:"APTO-3C",Price:[168200.00],Available:"Available",Area_Apparment:"116.00",Area_Terrace:"0.00",Rooms:"3",Bathrooms:"2",Parking_Space:"2"
+,Living_Dining:"29.17.",Kitchen:"9.68",Main_Bedroom:"16.58",Second_Bedroom:"15.80",Third_Bedroom:"15.13",Other_Areas:"29.64",Total_Area:"116",Facing: "Balcony is facing the pool"},
+{Apartment:"APTO-3D",Price:[133400.00],Available:"Available",Area_Apparment:"92.00",Area_Terrace:"0.00",Rooms:"2",Bathrooms:"2",Parking_Space:"2"
+,Living_Dining:"18.86",Kitchen:"12.41",Main_Bedroom:"13.35",Second_Bedroom:"13.71",Third_Bedroom:"",Other_Areas:"33.67",Total_Area:"92",Facing: "Balcony is facing its surroundings"},
+{Apartment:"APTO-3E",Price:[139600.00],Available:"Available",Area_Apparment:"94.00",Area_Terrace:"10.00",Rooms:"2",Bathrooms:"2",Parking_Space:"2"
+,Living_Dining:"18.22",Kitchen:"12.37",Main_Bedroom:"19.83",Second_Bedroom:"17.70",Third_Bedroom:"",Other_Areas:"25.88",Total_Area:"94",Facing: "Balcony is facing its surroundings"},
+{Apartment:"APTO-3F",Price:[104400.00],Available:"Available",Area_Apparment:"72.00",Area_Terrace:"0.00",Rooms:"1",Bathrooms:"1",Parking_Space:"1"
+,Living_Dining:"23.50",Kitchen:"12.50",Main_Bedroom:"19.90",Second_Bedroom:"",Third_Bedroom:"",Other_Areas:"16.10",Total_Area:"72",Facing: "Balcony is facing its surroundings"},
+{Apartment:"APTO-4A",Price:[104400.00],Available:"Sold",Area_Apparment:"72.00",Area_Terrace:"0.00",Rooms:"1",Bathrooms:"1",Parking_Space:"1"
+,Living_Dining:"23.50",Kitchen:"12.50",Main_Bedroom:"19.90",Second_Bedroom:"",Third_Bedroom:"",Other_Areas:"16.10",Total_Area:"72",Facing: "Balcony is facing the pool"},
 {Apartment:"APTO-4B",Price:[138148.00],Available:"Sold",Area_Apparment:"94.00",Area_Terrace:"5.60",Rooms:"2",Bathrooms:"2",Parking_Space:"2"
-,Living_Dining:"23.50",Kitchen:"12.50",Main_Bedroom:"19.90",Second_Bedroom:"",Third_Bedroom:"",Other_Areas:"16.10",Total_Area:"72"},
+,Living_Dining:"18.22",Kitchen:"12.37",Main_Bedroom:"19.83",Second_Bedroom:"17.70",Third_Bedroom:"",Other_Areas:"25.88",Total_Area:"94",Facing: "Balcony is facing the pool"},
 {Apartment:"APTO-4C",Price:[170048.00],Available:"Sold",Area_Apparment:"116.00",Area_Terrace:"5.60",Rooms:"3",Bathrooms:"2",Parking_Space:"2"
-,Living_Dining:"23.50",Kitchen:"12.50",Main_Bedroom:"19.90",Second_Bedroom:"",Third_Bedroom:"",Other_Areas:"16.10",Total_Area:"72"},
+,Living_Dining:"29.17.",Kitchen:"9.68",Main_Bedroom:"16.58",Second_Bedroom:"15.80",Third_Bedroom:"15.13",Other_Areas:"29.64",Total_Area:"116",Facing: "Balcony is facing the pool"},
 {Apartment:"APTO-4D",Price:[139274.00],Available:"Available",Area_Apparment:"92.00",Area_Terrace:"17.80",Rooms:"2",Bathrooms:"2",Parking_Space:"2"
-,Living_Dining:"23.50",Kitchen:"12.50",Main_Bedroom:"19.90",Second_Bedroom:"",Third_Bedroom:"",Other_Areas:"16.10",Total_Area:"72"},
+,Living_Dining:"18.86",Kitchen:"12.41",Main_Bedroom:"13.35",Second_Bedroom:"13.71",Third_Bedroom:"",Other_Areas:"33.67",Total_Area:"92",Facing: "Balcony is facing its surrounding"},
 {Apartment:"APTO-4E",Price:[138148.00],Available:"Available",Area_Apparment:"94.00",Area_Terrace:"5.60",Rooms:"2",Bathrooms:"2",Parking_Space:"2"
-,Living_Dining:"23.50",Kitchen:"12.50",Main_Bedroom:"19.90",Second_Bedroom:"",Third_Bedroom:"",Other_Areas:"16.10",Total_Area:"72"},
-{Apartment:"APTO-4F",Price:[104400.00],Available:"Available",Area_Apparment:"72.00",Area_Terrace:"0",Rooms:"1",Bathrooms:"1",Parking_Space:"1"
-,Living_Dining:"23.50",Kitchen:"12.50",Main_Bedroom:"19.90",Second_Bedroom:"",Third_Bedroom:"",Other_Areas:"16.10",Total_Area:"72"}]
+,Living_Dining:"18.22",Kitchen:"12.37",Main_Bedroom:"19.83",Second_Bedroom:"17.70",Third_Bedroom:"",Other_Areas:"25.88",Total_Area:"94",Facing: "Balcony is facing its surrounding"},
+{Apartment:"APTO-4F",Price:[104400.00],Available:"Available",Area_Apparment:"72.00",Area_Terrace:"0.00",Rooms:"1",Bathrooms:"1",Parking_Space:"1"
+,Living_Dining:"23.50",Kitchen:"12.50",Main_Bedroom:"19.90",Second_Bedroom:"",Third_Bedroom:"",Other_Areas:"16.10",Total_Area:"72",Facing: "Balcony is facing its surrounding"}]
 const apartments2 = apartments1;
 const apartments3 = apartments1;
 const apartments4 = apartments1;
 const apartments5 = apartments1;
 const apartments6 = apartments1;
 
-console.log(apartments1);
 let select = document.getElementById("metric");
 let building = document.getElementById("building");
 let Apartment = document.getElementById("apartment");
 let price = document.getElementById('price');
 
 myFunction (metrics,select);
-console.log(document.getElementById("metric").value);
 myFunctionBuilding (buildingsPt,building);
 
 function myFunctionAp( array , element ) {
    
     for (var i = 0; i < array.length; i++){
         if(i != 0){
-            console.log(array[i].Apartment);
             var opt = document.createElement('option');
                 opt.value = array[i].Apartment;
                 opt.innerHTML = array[i].Apartment;
                 element.appendChild(opt);
         }else{
-            console.log(array[i].Selector);
             var opt = document.createElement('option');
                 opt.value = array[i].Selector;
                 opt.innerHTML = array[i].Selector;
@@ -90,14 +86,17 @@ function myFunctionAp( array , element ) {
 
   /* 1 square meter is 10.7639 square ft */
   function myFunctionFill() {
-      let element_selected = document.getElementById("picture");
+      
+    let element_selected = document.getElementById("picture");
     let answer = document.getElementById("apartment").value;
     let availability = document.getElementById("available");
     /*checkPicture();*/
+    console.log("ANSWER = "+answer);
     if (document.getElementById("apartment_image") != null){
         var img = document.getElementById("apartment_image");
         img.src = "./img/apartments_images/"+answer+".png";
-    }else{
+    }else if((answer != null) && (answer != "") ){
+
         var img = document.createElement('img');
         img.src = "./img/apartments_images/"+answer+".png";
         img.id = "apartment_image";
@@ -105,6 +104,8 @@ function myFunctionAp( array , element ) {
         img.style.width = "100%";
         img.style.height = "100%";
         element_selected.appendChild(img);
+
+    }else{
 
     }
     
@@ -129,15 +130,17 @@ function myFunctionAp( array , element ) {
             document.getElementById('price').innerHTML = Intl.NumberFormat('en-US', {currency:"USD" , style: 'currency'}).format(apartments1[i].Price);
             document.getElementById('total_investment').value = apartments1[i].Price;
             document.getElementById('total_investment').innerHTML = Intl.NumberFormat('en-US', {currency:"USD" , style: 'currency'}).format(apartments1[i].Price);
+            document.getElementById('facing').value = apartments1[i].Facing;
+            document.getElementById('facing').innerHTML = apartments1[i].Facing;
             
             if ( (document.getElementById("metric").value) == 'M'){
 
                 document.getElementById('area_in').value = "area_in";
                 document.getElementById('area_in').innerHTML = "Area in Meters";
-                document.getElementById('area_apartment').value = apartments1[i].Area_Apparment;
-                document.getElementById('area_apartment').innerHTML = apartments1[i].Area_Apparment;
-                document.getElementById('area_terrace').value = apartments1[i].Area_Terrace;
-                document.getElementById('area_terrace').innerHTML = apartments1[i].Area_Terrace;
+                document.getElementById('area_apartment').value = (apartments1[i].Area_Apparment);
+                document.getElementById('area_apartment').innerHTML = (apartments1[i].Area_Apparment);
+                document.getElementById('area_terrace').value = (apartments1[i].Area_Terrace);
+                document.getElementById('area_terrace').innerHTML = (apartments1[i].Area_Terrace);
             }else{
 
                 document.getElementById('area_in').value = "area_in";
@@ -253,6 +256,8 @@ function myFunctionAp( array , element ) {
             }
             }
         }
+        calculation();
+
     }
 
 
@@ -271,13 +276,12 @@ function myFunctionAp( array , element ) {
   }
 
   function myFunctionBuilding( array , element ) {
-   
+    clearPicture();
     for (var i = 0; i < array.length; i++){
         var opt = document.createElement('option');
             
         if(i != 0){
         if(array[i].unlock == true){
-            console.log(array[i].Building);
             opt.value = array[i].Building;
                 opt.innerHTML = array[i].Building;
                 element.appendChild(opt);
@@ -288,7 +292,6 @@ function myFunctionAp( array , element ) {
                 
         }else{
             if(array[i].unlock == true){
-                console.log(array[i].Selector);
                 opt.value = array[i].Selector;
                 opt.innerHTML = array[i].Selector;
                 element.appendChild(opt);
@@ -375,10 +378,12 @@ function myFunctionAp( array , element ) {
     document.getElementById('advance_cash').innerHTML = "";
     document.getElementById('balance_to_finance').value = "";
     document.getElementById('balance_to_finance').innerHTML = "";
-    document.getElementById('advance_percentage').value = "";
-    document.getElementById('advance_percentage').innerHTML = "";
-
-    
+    document.getElementById('facing').value = "";
+    document.getElementById('facing').innerHTML = "";
+    document.getElementById('total_investment').value = "";
+    document.getElementById('total_investment').innerHTML = "";
+    document.getElementById('discount').value = "";
+    document.getElementById('discount').innerHTML = "";
 
   }
 
@@ -394,39 +399,32 @@ function sendBuilding() {
 
       
     let answer = document.getElementById("building").value;
-    console.log(answer);
    if ( answer == 1 ){
     myFunctionAp( apartments1 , Apartment ) ;
-    console.log("entre1");
    }
    if ( answer == 2 ){
     myFunctionAp( apartments2 , Apartment ) ;
-    console.log("entre2");
    }
    if ( answer == 3 ){
     myFunctionAp( apartments3 , Apartment ) ;
-    console.log("entre3");
    }
    if ( answer == 4 ){
     myFunctionAp( apartments4 , Apartment ) ;
-    console.log("entre4"); 
    }
    if ( answer == 5 ){
     myFunctionAp( apartments5 , Apartment ) ; 
-    console.log("entre5");
    }
    if ( answer == 6 ){
     myFunctionAp( apartments6 , Apartment ) ; 
-    console.log("entre6");
-}
+    }
 }
 let numero = 60;
 let finance = 87564;
 let amortization =  (finance / numero).toFixed(2);
 let interest1 = (((finance * (2/12).toFixed(8))/100).toFixed(2));
 let pago = (parseInt(amortization,10) +parseInt(interest1,10));
-console.log("Amortizacion = "+amortization );
-console.log("Pago 1 = "+pago );
+/*console.log("Amortizacion = "+amortization );
+console.log("Pago 1 = "+pago );*/
 
 function interestAccrued(numero,interest,finance,amortization,pago){
   
@@ -436,23 +434,35 @@ function interestAccrued(numero,interest,finance,amortization,pago){
         interest = ((finance * (2/12).toFixed(8))/100).toFixed(2);
         pago = (parseInt(amortization,10) +parseInt(interest,10));
         finance = (finance-pago);
-        console.log("interest "+numero+" = "+interest ) ;
-        console.log("finance "+numero+" = "+finance ) ;
+        /* console.log("interest "+numero+" = "+interest ) ;
+        console.log("finance "+numero+" = "+finance ) ; */
 
         return interest + interestAccrued(--numero,interest,finance,pago);
     }
     
 
 }
-console.log(interestAccrued(numero,0,finance,amortization,pago)) ;
-function calculation(percentage){
+/*console.log(interestAccrued(numero,0,finance,amortization,pago)) ;*/
 
-    
+function calculation(){
+
+let percentage = document.getElementById('advance_percentage').value;
+let apt_discount = ((document.getElementById('discount').value)*(document.getElementById('price').value))/100;
+document.getElementById('total_discount').value = apt_discount;
+document.getElementById('total_discount').innerHTML = Intl.NumberFormat('en-US', {currency:"USD" , style: 'currency'}).format(apt_discount);
+let price_new = (document.getElementById('price').value)-apt_discount;
+document.getElementById('total_investment').value = price_new;
+document.getElementById('total_investment').innerHTML = Intl.NumberFormat('en-US', {currency:"USD" , style: 'currency'}).format(price_new);
+
+
+    if (((document.getElementById('discount').value) >= 0) && ((document.getElementById('discount').value) <= 15) && ((document.getElementById('discount').value) >= "") ){
         if ((document.getElementById('price').value != null) && (document.getElementById('price').value != "")){
             if(percentage <= 100 && percentage >= 0){
-            var cash = (((document.getElementById('price').value) * percentage)/100);
-            var balance_finance = ((document.getElementById('price').value)-cash);
-            console.log("CALCULATION"+(((document.getElementById('price').value) * percentage))/100);
+            var cash = ((price_new * percentage)/100);
+            var balance_finance = (price_new-cash);
+            var discount = ((document.getElementById('discount').value)*(price_new))/100;
+
+            /*console.log("CALCULATION"+((price_new * percentage)/100));*/
             document.getElementById('advance_cash').value = cash;
             document.getElementById('advance_cash').innerHTML = Intl.NumberFormat('en-US', {currency:"USD" , style: 'currency'}).format(cash);
             document.getElementById('balance_to_finance').value = balance_finance;
@@ -461,8 +471,6 @@ function calculation(percentage){
             document.getElementById('capital').innerHTML = Intl.NumberFormat('en-US', {currency:"USD" , style: 'currency'}).format(balance_finance);
             */
             }else{
-                document.getElementById('advance_percentage').value = "";
-                document.getElementById('advance_percentage').innerHTML = "";
                 document.getElementById('advance_cash').value = "";
                 document.getElementById('advance_cash').innerHTML = "";
                 document.getElementById('balance_to_finance').value = "";
@@ -474,5 +482,15 @@ function calculation(percentage){
             alert("You need to select the building and the apartment");
         }
     
+    }else if(((document.getElementById('discount').value) < 0)){
+        alert("Discount can not be less than 0%");
+        document.getElementById('discount').value = "";
+        document.getElementById('discount').innerHTML = "";
 
+    }else{
+        alert("Discount can not be more than 15%"); 
+        document.getElementById('discount').value = "";
+        document.getElementById('discount').innerHTML = "";
+
+    }
 }
