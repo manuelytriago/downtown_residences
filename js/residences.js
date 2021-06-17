@@ -420,9 +420,12 @@ function sendBuilding() {
 }
 let numero = 60;
 let finance = 87564;
+
 let amortization =  (finance / numero).toFixed(2);
 let interest1 = (((finance * (2/12).toFixed(8))/100).toFixed(2));
 let pago = (parseInt(amortization,10) +parseInt(interest1,10));
+
+
 /*console.log("Amortizacion = "+amortization );
 console.log("Pago 1 = "+pago );*/
 
@@ -461,12 +464,28 @@ document.getElementById('total_investment').innerHTML = Intl.NumberFormat('en-US
             var cash = ((price_new * percentage)/100);
             var balance_finance = (price_new-cash);
             var discount = ((document.getElementById('discount').value)*(price_new))/100;
+            var monto = balance_finance;
+            var tasa = ((2/12)/100);
+            var meses = 60 ;
 
+            console.log('finance = '+balance_finance);
+            var elevado = (Math.pow((1+tasa),-60));
+            var top = tasa * monto;
+            var bottom = (1-elevado);
+            var monthly_fee = (top/bottom)
             /*console.log("CALCULATION"+((price_new * percentage)/100));*/
             document.getElementById('advance_cash').value = cash;
             document.getElementById('advance_cash').innerHTML = Intl.NumberFormat('en-US', {currency:"USD" , style: 'currency'}).format(cash);
             document.getElementById('balance_to_finance').value = balance_finance;
             document.getElementById('balance_to_finance').innerHTML = Intl.NumberFormat('en-US', {currency:"USD" , style: 'currency'}).format(balance_finance);
+            document.getElementById('monthly_fee').value = monthly_fee;
+            document.getElementById('monthly_fee').innerHTML = Intl.NumberFormat('en-US', {currency:"USD" , style: 'currency'}).format(monthly_fee);
+            console.log('entro a calculo');console.log('monto mensual = '+monthly_fee);
+
+            console.log('elevado = '+elevado);
+            console.log('tasa = '+tasa);
+            console.log('monto = '+monto);
+            console.log('top = '+top);console.log('bottom = '+bottom);
             /*document.getElementById('capital').value = balance_finance;
             document.getElementById('capital').innerHTML = Intl.NumberFormat('en-US', {currency:"USD" , style: 'currency'}).format(balance_finance);
             */
