@@ -1,11 +1,15 @@
 
-    var tbody = document.getElementById("tbody"),
+    var /*tbody = document.getElementById("tbody"),
         first = document.getElementById("first"),
-        area_break = document.getElementById("area_breakdown"),
+        area_break = document.getElementById("area_breakdown"),*/
+        pay = document.getElementById("pay"),
+        main_cont = document.getElementById("main"),
         facing = document.getElementById("main_facing"),
         sold = document.getElementById("status"),
         image = document.getElementById("image");
-    const main_mage = document.createElement("tr"),
+        id_apto = null;
+    const 
+        main_mage = document.createElement("tr"),
         main = document.createElement("tr"),
         status = document.createElement("tr"),
         opt = document.createElement("th"),
@@ -14,19 +18,27 @@
         pictureth = document.createElement("th"),
         img = document.createElement("img"),
         buildingsPt = [
-            { Selector: "Select Building", unlock: !0 },
-            { Building: 1, unlock: !0 },
-            { Building: 2, unlock: !0 },
-            { Building: 3, unlock: !0 },
-            { Building: 4, unlock: !0 },
-            { Building: 5, unlock: !0 },
-            { Building: 6, unlock: !0 },
+            { Selector: "Select Building",},
+            { Building: 1, },
+            { Building: 2, },
+            { Building: 3, },
+            { Building: 4, },
+            { Building: 5, },
+            { Building: 6, },
+        ],
+        buildingsfloors = [
+            { Selector: "Select Floor", },
+            { Floor: "First", },
+            { Floor: "Second", },
+            { Floor: "Third", },
+            { Floor: "Fourth", },
         ],
         metrics = ["I", "M"];
     var apartments1 = {},
         apartments = [
             { Selector: "Select Apartment" },
             {
+                Floor: "First",
                 Apartment: "APTO-1A",
                 Price: [140900],
                 Available: "",
@@ -46,6 +58,7 @@
                 Facing: "Terrace is facing the pool",
             },
             {
+                Floor: "First",
                 Apartment: "APTO-1B",
                 Price: [198e3],
                 Available: "",
@@ -65,6 +78,7 @@
                 Facing: "Terrace is facing the pool",
             },
             {
+                Floor: "First",
                 Apartment: "APTO-1C",
                 Price: [236250],
                 Available: "",
@@ -84,6 +98,7 @@
                 Facing: "Terrace is facing the pool",
             },
             {
+                Floor: "First",
                 Apartment: "APTO-1D",
                 Price: [214470],
                 Available: "",
@@ -103,6 +118,7 @@
                 Facing: "Terrace is facing its surroundings",
             },
             {
+                Floor: "First",
                 Apartment: "APTO-1E",
                 Price: [196050],
                 Available: "",
@@ -122,6 +138,7 @@
                 Facing: "Terrace is facing its surroundings",
             },
             {
+                Floor: "First",
                 Apartment: "APTO-1F",
                 Price: [139600],
                 Available: "",
@@ -141,6 +158,7 @@
                 Facing: "Terrace is facing its surroundings",
             },
             {
+                Floor: "Second",
                 Apartment: "APTO-2A",
                 Price: [121770],
                 Available: "",
@@ -160,6 +178,7 @@
                 Facing: "Balcony is facing the pool",
             },
             {
+                Floor: "Second",
                 Apartment: "APTO-2B",
                 Price: [155100],
                 Available: "",
@@ -179,6 +198,7 @@
                 Facing: "Balcony is facing the pool",
             },
             {
+                Floor: "Second",
                 Apartment: "APTO-2C",
                 Price: [195225],
                 Available: "",
@@ -198,6 +218,7 @@
                 Facing: "Balcony is facing the pool",
             },
             {
+                Floor: "Second",
                 Apartment: "APTO-2D",
                 Price: [168900],
                 Available: "",
@@ -217,6 +238,7 @@
                 Facing: "Balcony is facing its surroundings",
             },
             {
+                Floor: "Second",
                 Apartment: "APTO-2E",
                 Price: [155100],
                 Available: "",
@@ -236,6 +258,7 @@
                 Facing: "Balcony is facing its surroundings",
             },
             {
+                Floor: "Second",
                 Apartment: "APTO-2F",
                 Price: [121770],
                 Available: "",
@@ -255,6 +278,7 @@
                 Facing: "Balcony is facing its surroundings",
             },
             {
+                Floor: "Third",
                 Apartment: "APTO-3A",
                 Price: [118800],
                 Available: "",
@@ -274,6 +298,7 @@
                 Facing: "Balcony is facing the pool",
             },
             {
+                Floor: "Third",
                 Apartment: "APTO-3B",
                 Price: [159600],
                 Available: "",
@@ -293,6 +318,7 @@
                 Facing: "Balcony is facing the pool",
             },
             {
+                Floor: "Third",
                 Apartment: "APTO-3C",
                 Price: [191400],
                 Available: "",
@@ -312,6 +338,7 @@
                 Facing: "Balcony is facing the pool",
             },
             {
+                Floor: "Third",
                 Apartment: "APTO-3D",
                 Price: [151800],
                 Available: "",
@@ -331,6 +358,7 @@
                 Facing: "Balcony is facing its surroundings",
             },
             {
+                Floor: "Third",
                 Apartment: "APTO-3E",
                 Price: [159600],
                 Available: "",
@@ -350,6 +378,7 @@
                 Facing: "Balcony is facing its surroundings",
             },
             {
+                Floor: "Third",
                 Apartment: "APTO-3F",
                 Price: [118800],
                 Available: "",
@@ -369,6 +398,7 @@
                 Facing: "Balcony is facing its surroundings",
             },
             {
+                Floor: "Fourth",
                 Apartment: "APTO-4A",
                 Price: [118800],
                 Available: "",
@@ -388,6 +418,7 @@
                 Facing: "Balcony is facing the pool",
             },
             {
+                Floor: "Fourth",
                 Apartment: "APTO-4B",
                 Price: [157620],
                 Available: "",
@@ -407,6 +438,7 @@
                 Facing: "Balcony is facing the pool",
             },
             {
+                Floor: "Fourth",
                 Apartment: "APTO-4C",
                 Price: [193920],
                 Available: "",
@@ -426,6 +458,7 @@
                 Facing: "Balcony is facing the pool",
             },
             {
+                Floor: "Fourth",
                 Apartment: "APTO-4D",
                 Price: [159810],
                 Available: "",
@@ -445,6 +478,7 @@
                 Facing: "Balcony is facing its surrounding",
             },
             {
+                Floor: "Fourth",
                 Apartment: "APTO-4E",
                 Price: [157620],
                 Available: "",
@@ -464,6 +498,7 @@
                 Facing: "Balcony is facing its surrounding",
             },
             {
+                Floor: "Fourth",
                 Apartment: "APTO-4F",
                 Price: [118800],
                 Available: "",
@@ -632,22 +667,141 @@
         (apartments6[22].Available = "Sold"),
         (apartments6[23].Available = "Sold"),
         (apartments6[24].Available = "Available");
-    let select = document.getElementById("metric"),
+    let /*select = document.getElementById("metric"),*/
         building = document.getElementById("building"),
-        Apartment = document.getElementById("apartment"),
+        floor = document.getElementById("apartment"),
         price = document.getElementById("price");
-    function myFunctionAp(array, element) {
-        for (var i = 0; i < array.length; i++) {
-            var opt, opt;
-            0 != i
-                ? (((opt = document.createElement("option")).value = array[i].Apartment), (opt.innerHTML = array[i].Apartment), element.appendChild(opt))
-                : (((opt = document.createElement("option")).value = array[i].Selector), (opt.innerHTML = array[i].Selector), element.appendChild(opt));
-        }
-    }
+
+  
     function myFunctionFill() {
-        let element_selected = document.getElementById("picture"),
+        clear_tables();
             answer = document.getElementById("apartment").value,
             building = document.getElementById("building").value;
+            if("Select Building" != building){
+                if ("Select Floor" != answer) {
+                    (building = parseInt(building)),
+                        1 === building && (apartments1 = JSON.parse(JSON.stringify(apartments))),
+                        2 === building && (apartments1 = JSON.parse(JSON.stringify(apartments2))),
+                        3 === building && (apartments1 = JSON.parse(JSON.stringify(apartments3))),
+                        4 === building && (apartments1 = JSON.parse(JSON.stringify(apartments4))),
+                        5 === building && (apartments1 = JSON.parse(JSON.stringify(apartments5))),
+                        6 === building && (apartments1 = JSON.parse(JSON.stringify(apartments6)));
+                        
+                        const principal = document.createElement("div")
+                        principal.id = "half"
+                        principal.className = "table_div";
+                        main_cont.appendChild(principal)
+                        const secondary = document.createElement("div")
+                        secondary.id = "other"
+                        secondary.className = "table_div";
+                        main_cont.appendChild(secondary)
+                        const last_div = document.createElement("div")
+                            last_div.id = "info"
+                            last_div.className = "table_div";
+                        const last_div2 = document.createElement("div")
+                        last_div2.className = "data_image_flex";
+                        const lastin_div = document.createElement("h1")
+                            lastin_div.className = "col-12 text";
+                            lastin_div.value = "BUILDING "+building+ " "+answer.toUpperCase()+ " FLOOR"
+                            lastin_div.innerHTML = "BUILDING "+building+ " "+answer.toUpperCase()+ " FLOOR"
+                            main_cont.appendChild(last_div)
+                            last_div.appendChild(last_div2)
+                            last_div2.appendChild(lastin_div)
+                            let cont = 0;
+                    for (var i = 0; i < apartments1.length; i++)
+                    
+                    if ( answer == apartments1[i].Floor ){
+                        console.log("Floor = "+apartments1[i].Floor)
+                        cont++;
+                        const newone = document.createElement("div")
+                        newone.className = "data_table_flex";
+                        const first = document.createElement("div")
+                        first.className = "data_image_flex";
+                        const second = document.createElement("div")
+                        second.className = "data_image_flex";
+                        const third = document.createElement("div")
+                        third.className = "data_image_flex";
+
+
+                        const link = document.createElement("a")
+                        link.id = apartments1[i].Apartment;
+                        link.value = apartments1[i].Apartment;
+                        link.onclick =function(){
+                            fillPlan(this);
+                        }
+
+                        const image = document.createElement("img")
+                        image.src = "img/apartments_images/" + apartments1[i].Apartment + ".png"
+                        image.id = "apartment_image"+apartments1[i].Apartment;
+                        //img.style.display = "block"
+                        image.style.width = "400px"
+                        image.style.height = "400px"
+                        const faceapto = document.createElement("p")
+                        faceapto.className = "text";
+                        facingtd.id = "facing"
+                        faceapto.value = "facing"+apartments1[i].Facing;
+                        faceapto.innerHTML = apartments1[i].Facing
+                        const statusapto = document.createElement("p")
+                        statusapto.className = "text";
+                        statusapto.id = "status"+apartments1[i].Available;
+                        statusapto.value = apartments1[i].Available;
+                        statusapto.innerHTML = apartments1[i].Available;;
+                        console.log("contador = "+cont);
+                        if (cont <=3){
+                            principal.appendChild(newone)
+                            newone.appendChild(first)
+                            newone.appendChild(second)
+                            newone.appendChild(third)
+                            first.appendChild(link)
+                            link.appendChild(image)
+                            second.appendChild(faceapto)
+                            third.appendChild(statusapto)
+                        }
+                        if (cont > 3){
+                            secondary.appendChild(newone)
+                            newone.appendChild(first)
+                            newone.appendChild(second)
+                            newone.appendChild(third)
+                            first.appendChild(link)
+                            link.appendChild(image)
+                            second.appendChild(faceapto)
+                            third.appendChild(statusapto)
+                        }
+                       
+                    } 
+
+                }
+            }
+    
+    }
+    function clear_tables() {
+        const info = document.getElementById("info");
+        const other = document.getElementById("other");
+        const half = document.getElementById("half");
+        (document.getElementById("price").value = ""),
+            (document.getElementById("price").innerHTML = ""),
+            (document.getElementById("price").style.backgroundColor = "unset"),
+            (document.getElementById("advance_cash").value = ""),
+            (document.getElementById("advance_cash").innerHTML = ""),
+            (document.getElementById("balance_to_finance").value = ""),
+            (document.getElementById("balance_to_finance").innerHTML = ""),
+            (document.getElementById("total_investment").value = ""),
+            (document.getElementById("total_investment").innerHTML = ""),
+            (document.getElementById("discount").value = ""),
+            (document.getElementById("discount").innerHTML = ""),
+            
+                null != info &&
+                null != other &&
+                null != half &&
+                (document.getElementById("info").remove(0),document.getElementById("other").remove(0),document.getElementById("half").remove(0));
+    }
+
+    function fillPlan(apto){
+        console.log("entre fill plan")
+        building = document.getElementById("building").value;
+        answer = apto.id;
+        id_apto = apto.id;
+        console.log("building "+building)
         if ("Select Apartment" != answer) {
             (building = parseInt(building)),
                 1 === building && (apartments1 = JSON.parse(JSON.stringify(apartments))),
@@ -662,7 +816,7 @@
                     (document.getElementById("price").innerHTML = Intl.NumberFormat("en-US", { currency: "USD", style: "currency" }).format(apartments1[i].Price)),
                     (document.getElementById("total_investment").value = apartments1[i].Price),
                     (document.getElementById("total_investment").innerHTML = Intl.NumberFormat("en-US", { currency: "USD", style: "currency" }).format(apartments1[i].Price)),
-                    0 != area_break.childElementCount && null != facing && null != sold && null != image
+                    null != facing && null != sold && null != image
                         ? (document.getElementById("breakdown").remove(0),
                           document.getElementById("status").remove(0),
                           document.getElementById("main_facing").remove(0),
@@ -731,11 +885,9 @@
                           (status.value = "status"),
                           (status.rowspan = 1),
                           (status.innerHTML = ""),
-                          tbody.insertBefore(status, first),
+                          
                           (sold = document.getElementById("status")),
-                          tbody.insertBefore(main, sold),
                           (facing = document.getElementById("main_facing")),
-                          tbody.insertBefore(main_mage, facing),
                           (image = document.getElementById("image")),
                           (opt.id = "breakdown"),
                           (opt.value = "breakdown"),
@@ -765,97 +917,13 @@
                           (img.id = "apartment_image"),
                           (img.style.display = "block"),
                           (img.style.width = "100%"),
-                          (img.style.height = "100%"),
-                          pictureth.appendChild(img),
-                          area_break.appendChild(opt),
-                          facing.appendChild(facingtd),
-                          sold.appendChild(availabletd),
-                          image.appendChild(pictureth)),
-                    "M" == document.getElementById("metric").value
-                        ? ((document.getElementById("area_in").value = "area_in"),
-                          (document.getElementById("area_in").innerHTML = "Area in Meters"),
-                          (document.getElementById("area_apartment").value = apartments1[i].Area_Apparment),
-                          (document.getElementById("area_apartment").innerHTML = apartments1[i].Area_Apparment),
-                          (document.getElementById("area_terrace").value = apartments1[i].Area_Terrace),
-                          (document.getElementById("area_terrace").innerHTML = apartments1[i].Area_Terrace))
-                        : ((document.getElementById("area_in").value = "area_in"),
-                          (document.getElementById("area_in").innerHTML = "Area in Square Feet"),
-                          (document.getElementById("area_apartment").value = Math.round((10.7639 * apartments1[i].Area_Apparment).toFixed(2))),
-                          (document.getElementById("area_apartment").innerHTML = Math.round((10.7639 * apartments1[i].Area_Apparment).toFixed(2))),
-                          (document.getElementById("area_terrace").value = Math.round((10.7639 * apartments1[i].Area_Terrace).toFixed(2))),
-                          (document.getElementById("area_terrace").innerHTML = Math.round((10.7639 * apartments1[i].Area_Terrace).toFixed(2)))),
-                    (document.getElementById("rooms").value = apartments1[i].Rooms),
-                    (document.getElementById("rooms").innerHTML = apartments1[i].Rooms),
-                    (document.getElementById("bathrooms").value = apartments1[i].Bathrooms),
-                    (document.getElementById("bathrooms").innerHTML = apartments1[i].Bathrooms),
-                    (document.getElementById("parking_space").value = apartments1[i].Parking_Space),
-                    (document.getElementById("parking_space").innerHTML = apartments1[i].Parking_Space),
-                    "" == apartments1[i].Living_Dining
-                        ? ((document.getElementById("area_living_dining_ft").value = "N/A"),
-                          (document.getElementById("area_living_dining_ft").innerHTML = "N/A"),
-                          (document.getElementById("area_living_dining_m").value = "N/A"),
-                          (document.getElementById("area_living_dining_m").innerHTML = "N/A"))
-                        : ((document.getElementById("area_living_dining_ft").value = Math.round((10.7639 * apartments1[i].Living_Dining).toFixed(2))),
-                          (document.getElementById("area_living_dining_ft").innerHTML = Math.round((10.7639 * apartments1[i].Living_Dining).toFixed(2))),
-                          (document.getElementById("area_living_dining_m").value = apartments1[i].Living_Dining),
-                          (document.getElementById("area_living_dining_m").innerHTML = apartments1[i].Living_Dining)),
-                    "" == apartments1[i].Kitchen
-                        ? ((document.getElementById("kitchen_ft").value = "N/A"),
-                          (document.getElementById("kitchen_ft").innerHTML = "N/A"),
-                          (document.getElementById("kitchen_m").value = "N/A"),
-                          (document.getElementById("kitchen_m").innerHTML = "N/A"))
-                        : ((document.getElementById("kitchen_ft").value = Math.round((10.7639 * apartments1[i].Kitchen).toFixed(2))),
-                          (document.getElementById("kitchen_ft").innerHTML = Math.round((10.7639 * apartments1[i].Kitchen).toFixed(2))),
-                          (document.getElementById("kitchen_m").value = apartments1[i].Kitchen),
-                          (document.getElementById("kitchen_m").innerHTML = apartments1[i].Kitchen)),
-                    "" == apartments1[i].Main_Bedroom
-                        ? ((document.getElementById("main_bedroom_ft").value = "N/A"),
-                          (document.getElementById("main_bedroom_ft").innerHTML = "N/A"),
-                          (document.getElementById("main_bedroom_m").value = "N/A"),
-                          (document.getElementById("main_bedroom_m").innerHTML = "N/A"))
-                        : ((document.getElementById("main_bedroom_ft").value = Math.round((10.7639 * apartments1[i].Main_Bedroom).toFixed(2))),
-                          (document.getElementById("main_bedroom_ft").innerHTML = Math.round((10.7639 * apartments1[i].Main_Bedroom).toFixed(2))),
-                          (document.getElementById("main_bedroom_m").value = apartments1[i].Main_Bedroom),
-                          (document.getElementById("main_bedroom_m").innerHTML = apartments1[i].Main_Bedroom)),
-                    "" == apartments1[i].Second_Bedroom
-                        ? ((document.getElementById("second_bedroom_ft").value = "N/A"),
-                          (document.getElementById("second_bedroom_ft").innerHTML = "N/A"),
-                          (document.getElementById("second_bedroom_m").value = "N/A"),
-                          (document.getElementById("second_bedroom_m").innerHTML = "N/A"))
-                        : ((document.getElementById("second_bedroom_ft").value = Math.round((10.7639 * apartments1[i].Second_Bedroom).toFixed(2))),
-                          (document.getElementById("second_bedroom_ft").innerHTML = Math.round((10.7639 * apartments1[i].Second_Bedroom).toFixed(2))),
-                          (document.getElementById("second_bedroom_m").value = apartments1[i].Second_Bedroom),
-                          (document.getElementById("second_bedroom_m").innerHTML = apartments1[i].Second_Bedroom)),
-                    "" == apartments1[i].Third_Bedroom
-                        ? ((document.getElementById("third_bedroom_ft").value = "N/A"),
-                          (document.getElementById("third_bedroom_ft").innerHTML = "N/A"),
-                          (document.getElementById("third_bedroom_m").value = "N/A"),
-                          (document.getElementById("third_bedroom_m").innerHTML = "N/A"))
-                        : ((document.getElementById("third_bedroom_ft").value = Math.round((10.7639 * apartments1[i].Third_Bedroom).toFixed(2))),
-                          (document.getElementById("third_bedroom_ft").innerHTML = Math.round((10.7639 * apartments1[i].Third_Bedroom).toFixed(2))),
-                          (document.getElementById("third_bedroom_m").value = apartments1[i].Third_Bedroom),
-                          (document.getElementById("third_bedroom_m").innerHTML = apartments1[i].Third_Bedroom)),
-                    "" == apartments1[i].Other_Areas
-                        ? ((document.getElementById("other_areas_ft").value = "N/A"),
-                          (document.getElementById("other_areas_ft").innerHTML = "N/A"),
-                          (document.getElementById("other_areas_m").value = "N/A"),
-                          (document.getElementById("other_areas_m").innerHTML = "N/A"))
-                        : ((document.getElementById("other_areas_ft").value = Math.round((10.7639 * apartments1[i].Other_Areas).toFixed(2))),
-                          (document.getElementById("other_areas_ft").innerHTML = Math.round((10.7639 * apartments1[i].Other_Areas).toFixed(2))),
-                          (document.getElementById("other_areas_m").value = apartments1[i].Other_Areas),
-                          (document.getElementById("other_areas_m").innerHTML = apartments1[i].Other_Areas)),
-                    "" == apartments1[i].Total_Area
-                        ? ((document.getElementById("total_ft").value = "N/A"),
-                          (document.getElementById("total_ft").innerHTML = "N/A"),
-                          (document.getElementById("total_m").value = "N/A"),
-                          (document.getElementById("total_m").innerHTML = "N/A"))
-                        : ((document.getElementById("total_ft").value = Math.round((10.7639 * apartments1[i].Total_Area).toFixed(2))),
-                          (document.getElementById("total_ft").innerHTML = Math.round((10.7639 * apartments1[i].Total_Area).toFixed(2))),
-                          (document.getElementById("total_m").value = apartments1[i].Total_Area),
-                          (document.getElementById("total_m").innerHTML = apartments1[i].Total_Area)));
+                          (img.style.height = "100%")));
         } else clear_tables();
         calculation();
+            
+
     }
+    
     function myFunction(array, element) {
         for (var i = 0; i < array.length; i++) {
             var opt = document.createElement("option");
@@ -866,80 +934,38 @@
         clear_tables();
         for (var i = 0; i < array.length; i++) {
             var opt = document.createElement("option");
-            0 != i
-                ? 1 == array[i].unlock
-                    ? ((opt.value = array[i].Building), (opt.innerHTML = array[i].Building), element.appendChild(opt))
-                    : opt.setAttribute("disabled", "disabled")
-                : 1 == array[i].unlock
-                ? ((opt.value = array[i].Selector), (opt.innerHTML = array[i].Selector), element.appendChild(opt))
-                : opt.setAttribute("disabled", "disabled");
+            if (0 != i){
+                ((opt.value = array[i].Building), (opt.innerHTML = array[i].Building), element.appendChild(opt))
+                
+            }else{
+                ((opt.value = array[i].Selector), (opt.innerHTML = array[i].Selector), element.appendChild(opt))
+                
+            }
+                
         }
     }
-    function clear_tables() {
-        (document.getElementById("price").value = ""),
-            (document.getElementById("price").innerHTML = ""),
-            (document.getElementById("price").style.backgroundColor = "unset"),
-            (document.getElementById("area_apartment").value = ""),
-            (document.getElementById("area_apartment").innerHTML = ""),
-            (document.getElementById("area_terrace").value = ""),
-            (document.getElementById("area_terrace").innerHTML = ""),
-            (document.getElementById("rooms").value = ""),
-            (document.getElementById("rooms").innerHTML = ""),
-            (document.getElementById("bathrooms").value = ""),
-            (document.getElementById("bathrooms").innerHTML = ""),
-            (document.getElementById("parking_space").value = ""),
-            (document.getElementById("parking_space").innerHTML = ""),
-            (document.getElementById("area_living_dining_m").innerHTML = ""),
-            (document.getElementById("kitchen_m").value = ""),
-            (document.getElementById("kitchen_m").innerHTML = ""),
-            (document.getElementById("main_bedroom_m").value = ""),
-            (document.getElementById("main_bedroom_m").innerHTML = ""),
-            (document.getElementById("second_bedroom_m").value = ""),
-            (document.getElementById("second_bedroom_m").innerHTML = ""),
-            (document.getElementById("third_bedroom_m").value = ""),
-            (document.getElementById("third_bedroom_m").innerHTML = ""),
-            (document.getElementById("other_areas_m").value = ""),
-            (document.getElementById("other_areas_m").innerHTML = ""),
-            (document.getElementById("total_m").value = ""),
-            (document.getElementById("total_m").innerHTML = ""),
-            (document.getElementById("area_living_dining_ft").value = ""),
-            (document.getElementById("area_living_dining_ft").innerHTML = ""),
-            (document.getElementById("kitchen_ft").value = ""),
-            (document.getElementById("kitchen_ft").innerHTML = ""),
-            (document.getElementById("main_bedroom_ft").value = ""),
-            (document.getElementById("main_bedroom_ft").innerHTML = ""),
-            (document.getElementById("second_bedroom_ft").value = ""),
-            (document.getElementById("second_bedroom_ft").innerHTML = ""),
-            (document.getElementById("third_bedroom_ft").value = ""),
-            (document.getElementById("third_bedroom_ft").innerHTML = ""),
-            (document.getElementById("other_areas_ft").value = ""),
-            (document.getElementById("other_areas_ft").innerHTML = ""),
-            (document.getElementById("total_ft").value = ""),
-            (document.getElementById("total_ft").innerHTML = ""),
-            (document.getElementById("advance_cash").value = ""),
-            (document.getElementById("advance_cash").innerHTML = ""),
-            (document.getElementById("balance_to_finance").value = ""),
-            (document.getElementById("balance_to_finance").innerHTML = ""),
-            (document.getElementById("total_investment").value = ""),
-            (document.getElementById("total_investment").innerHTML = ""),
-            (document.getElementById("discount").value = ""),
-            (document.getElementById("discount").innerHTML = ""),
-            0 != area_break.childElementCount &&
-                null != facing &&
-                null != sold &&
-                null != image &&
-                (document.getElementById("breakdown").remove(0), document.getElementById("status").remove(0), document.getElementById("main_facing").remove(0), document.getElementById("image").remove(0));
+    function myFunctionAp(array, element) {
+        for (var i = 0; i < array.length; i++) {
+            var opt, opt;
+            if(0 != i){
+                (((opt = document.createElement("option")).value = array[i].Floor), (opt.innerHTML = array[i].Floor), element.appendChild(opt))
+               
+            }else{
+            (((opt = document.createElement("option")).value = array[i].Selector), (opt.innerHTML = array[i].Selector), element.appendChild(opt));
+            }
+        }
     }
     function sendBuilding() {
-        for (; Apartment.options.length > 0; ) Apartment.remove(0);
+
+        for (; floor.options.length > 0; ) floor.remove(0);
         clear_tables();
         let answer = document.getElementById("building").value;
-        1 == answer && myFunctionAp(apartments, Apartment),
-            2 == answer && myFunctionAp(apartments2, Apartment),
-            3 == answer && myFunctionAp(apartments3, Apartment),
-            4 == answer && myFunctionAp(apartments3, Apartment),
-            5 == answer && myFunctionAp(apartments3, Apartment),
-            6 == answer && myFunctionAp(apartments3, Apartment);
+        1 == answer && myFunctionAp(buildingsfloors, floor),
+            2 == answer && myFunctionAp(buildingsfloors, floor),
+            3 == answer && myFunctionAp(buildingsfloors, floor),
+            4 == answer && myFunctionAp(buildingsfloors, floor),
+            5 == answer && myFunctionAp(buildingsfloors, floor),
+            6 == answer && myFunctionAp(buildingsfloors, floor);
     }
     function calculation() {
         let percentage = document.getElementById("advance_percentage").value,
@@ -989,13 +1015,23 @@
                       (document.getElementById("discount").value = ""),
                       (document.getElementById("discount").innerHTML = ""),
                       (document.getElementById("total_discount").value = ""),
-                      (document.getElementById("total_discount").innerHTML = ""),
-                      (document.getElementById("total_investment").value = ""),
-                      (document.getElementById("total_investment").innerHTML = ""),
-                      myFunctionFill());
-        console.log(document.getElementById("apartment").isEmpty),
+                      (document.getElementById("total_discount").innerHTML = "")
+                      
+                      );
+        console.log(document.getElementById("apartment").isEmpty)
+        console.log(document.getElementById("apartment").value)
+            null == id_apto &&
+            ((document.getElementById("discount").value = ""),
+            (document.getElementById("discount").innerHTML = ""),
+            (document.getElementById("total_discount").value = ""),
+            (document.getElementById("total_discount").innerHTML = ""),
+            (document.getElementById("total_investment").value = ""),
+            (document.getElementById("total_investment").innerHTML = ""),
+            myFunctionFill(),
+            alert("You need to click on the apartment photo")),
             "Select Building" != document.getElementById("building").value &&
-                "Select Apartment" == document.getElementById("apartment").value &&
+                "" == document.getElementById("apartment").value ||
+                "Select Floor" === document.getElementById("apartment").value &&
                 ((document.getElementById("discount").value = ""),
                 (document.getElementById("discount").innerHTML = ""),
                 (document.getElementById("total_discount").value = ""),
@@ -1015,5 +1051,5 @@
                 myFunctionFill(),
                 alert("You need to select a building and an apartment"));
     }
-    myFunction(metrics, select), myFunctionBuilding(buildingsPt, building);
+    /*myFunction(metrics, select),*/ myFunctionBuilding(buildingsPt, building);
 
