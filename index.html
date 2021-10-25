@@ -39,23 +39,21 @@
             <table class="data_table_flex1 table-striped" >
                 <tbody class="tbody1">
                 <tr>
-                    <td colspan="1" class="text_align_left">Building No.</td>
-                    <td id="building_select" colspan="2" >
+                    <td colspan="2" class="text_align_left">BUILDING No.</td>
+                    <td colspan="2" id="building_select"  >
                         <select class="light_blue_background" onchange="sendBuilding()" style="width: 100%;" name="building" id="building">
                       </select>
                     </td>
-                    <td colspan="1" class="text_align_left">Floor</td>
-                    <td id="apartment_select" colspan="2" >
+                    <td colspan="1" class="text_align_left">FLOOR</td>
+                    <td colspan="3" id="apartment_select"  >
                         <select class="light_blue_background" onchange="myFunctionFill(this);" style="width: 100%;" name="Apartment" id="apartment">
                     </select>
                     </td>
-                    <td colspan="1" class="text_align_left">Price</td>
-                    <td id="price" colspan="2"></td>
-                    <td class="text_align_left">Discount</td>
-                    <td > <input class="light_blue_background" onkeyup="calculation(this)" style="width: 99%; height: 99%;  border: 1px solid black;; padding: 0px 0px 0px 0px" name="advance" id="discount" value="0"> </td>
-                    <td id="total_discount"></td>
-                    <td colspan="1" class="text_align_left">TOTAL CAPEX INVESTMENT</td>
-                    <td id="total_investment" colspan="5" class="blue_background"></td>
+                    <td colspan="1" class="text_align_left">PRICE</td>
+                    <td colspan="2" id="price" ></td>
+                    <td colspan="7" class="text_align_left">TOTAL CAPEX INVESTMENT</td>
+                    <td colspan="3" id="total_investment" class="blue_background"></td>
+                    
                 </tr>
                 <!--<tr>
                     <td colspan="1" class="text_align_left">Apartment No.</td>
@@ -68,19 +66,25 @@
                     <th colspan="19">PAYMENT PLAN</th>
                 </tr>
                 <tr>
-                    <td colspan="1" class="text_align_left">ADVANCE %</td>
-                    <td colspan="2"><input disabled class="light_blue_background"  style="width: 99%; height: 99%;  border: 1px solid black;; padding: 0px 0px 0px 0px" name="dolar_advance" id="advance_percentage" value="40"> </td>
-                    <td colspan="1" class="text_align_left">ADVANCE $</td>
-                    <td id="advance_cash" colspan="2"></td>
-                    <td colspan="1" class="text_align_left">BALANCE TO FINANCE</td>
-                    <td id="balance_to_finance" colspan="2"></td>
-                    <td class="text_align_left">DUES</td>
-                    <td class="light_blue_background">60</td>
-                    <td class="blue_background">5 YEARS</td>
-                    <td colspan="1" class="text_align_left">Interest Year</td>
-                    <td colspan="2" class="blue_background">3.8%</td>
+                    <td colspan="2" class="text_align_left">DISCOUNT</td>
+                    <td colspan="2" > <input class="light_blue_background" onkeyup="calculation(this)" style="width: 99%; height: 99%;  border: 1px solid black;; padding: 0px 0px 0px 0px" name="advance" id="discount" value="0"> </td>
+                    <td colspan="1" id="total_discount"></td>
+                    <td colspan="3" class="text_align_left">ADVANCE %</td>
+                    <td colspan="1"><input disabled class="light_blue_background"  style="width: 99%; height: 99%;  border: 1px solid black;; padding: 0px 0px 0px 0px" name="dolar_advance" id="advance_percentage" value="40"> </td>
+                    <td colspan="2" class="text_align_left">ADVANCE $</td>
+                    <td colspan="3" id="advance_cash" ></td>
+                    <td colspan="4" class="text_align_left">BALANCE TO FINANCE</td>
+                    <td colspan="3" id="balance_to_finance" ></td>
+                    
+                </tr>
+                <tr>
+                    <td colspan="2" class="text_align_left">DUES</td>
+                    <td colspan="2" class="light_blue_background">60</td>
+                    <td colspan="1" class="blue_background">5 YEARS</td>
+                    <td colspan="3" class="text_align_left">INTEREST YEAR</td>
+                    <td colspan="1" class="blue_background">3.8%</td>
                     <td colspan="2">MONTHLY FEE</td>
-                    <td id="monthly_fee" ></td>
+                    <td colspan="9" id="monthly_fee" ></td>
                 </tr>
                 </tbody>
             </table>      

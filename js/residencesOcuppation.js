@@ -726,6 +726,7 @@
                         const link = document.createElement("a")
                         link.id = apartments1[i].Apartment;
                         link.value = apartments1[i].Apartment;
+                        link.className = "image";
                         link.onclick =function(){
                             fillPlan(this);
                         }
@@ -734,8 +735,8 @@
                         image.src = "img/apartments_images/" + apartments1[i].Apartment + ".png"
                         image.id = "apartment_image"+apartments1[i].Apartment;
                         //img.style.display = "block"
-                        image.style.width = "400px"
-                        image.style.height = "400px"
+                        /*image.style.width = "400px"
+                        image.style.height = "400px"*/
                         const faceapto = document.createElement("p")
                         faceapto.className = "text";
                         facingtd.id = "facing"
