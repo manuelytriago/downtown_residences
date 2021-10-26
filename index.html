@@ -6,9 +6,6 @@
     <meta name="description" content="I'm Mike and your should hire me to build your website">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 	<link rel="shortcut icon" type="image/png" href="favicon.jpg">
-    
-	<!--<link rel="preload" href="./css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-	<noscript><link rel="stylesheet" href="./css/bootstrap.min.css"></noscript>-->
 	<link rel="preload" href="./css/font-awesome.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 	<noscript><link rel="stylesheet" href="./css/font-awesome.min.css"></noscript>
 	<link rel="preload" href="styleocupation.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -36,7 +33,7 @@
 <body> <!-- Main container -->
     <div id="main" class="page-container">
         <div id="pay" class="table_div">
-            <table class="data_table_flex1 table-striped" >
+            <table id="payment" class="data_table_flex1 table-striped" >
                 <tbody class="tbody1">
                 <tr>
                     <td colspan="2" class="text_align_left">BUILDING No.</td>
@@ -55,13 +52,6 @@
                     <td colspan="3" id="total_investment" class="blue_background"></td>
                     
                 </tr>
-                <!--<tr>
-                    <td colspan="1" class="text_align_left">Apartment No.</td>
-                    <td id="apartment_select" colspan="2" >
-                        <select class="light_blue_background" onchange="myFunctionFill();" style="width: 100%;" name="Apartment" id="apartment">
-                    </select>
-                    </td>
-                </tr>-->
                 <tr>
                     <th colspan="19">PAYMENT PLAN</th>
                 </tr>
@@ -88,247 +78,8 @@
                 </tr>
                 </tbody>
             </table>      
-
         </div>
-
-       <!-- <div class="table_div">  
-            <div class="data_table_flex"> 
-                <div class="data_image_flex"> 
-                    <a id="APTO-1A" value="APTO-1A" onclick="fillPlan(this);">
-                    <img class="" src="img/apartments_images/APTO-1A.png" style="width: 300px;height: 300px;">
-                    <a>
-                </div>
-                <div class="data_image_flex"> 
-                    <p class="text">Facing the beach</p>
-                </div>
-                <div class="data_image_flex"> 
-                    <p class="text">Available</p>
-                </div>
-            </div>
-            <div class="data_table_flex"> 
-                <div class="data_image_flex"> 
-                    <a id="APTO-1B" value="APTO-1B" onclick="fillPlan(this);">
-                    <img class="" src="img/apartments_images/APTO-1B.png" style="width: 300px;height: 300px;">
-                    <a>
-                </div>
-                <div class="data_image_flex"> 
-                    <p class="text">Facing the beach</p>
-                </div>
-                <div class="data_image_flex"> 
-                    <p class="text">Available</p>
-                </div>
-            </div>
-            <div class="data_table_flex"> 
-                <div class="data_image_flex"> 
-                    <a id="APTO-1C" value="APTO-1C" onclick="fillPlan(this);">
-                    <img class="" src="img/apartments_images/APTO-1C.png" style="width: 300px;height: 300px;">
-                    <a>
-                </div>
-                <div class="data_image_flex"> 
-                    <p class="text">Facing the beach</p>
-                </div>
-                <div class="data_image_flex"> 
-                    <p class="text">Available</p>
-                </div>
-            </div>
-        </div>
-        <div class="table_div">  
-            <div class="data_table_flex"> 
-                <div class="data_image_flex"> 
-                    <a id="APTO-1D" value="APTO-1D" onclick="fillPlan(this);">
-                    <img class="" src="img/apartments_images/APTO-1D.png" style="width: 300px;height: 300px;">
-                </a>
-                </div>
-                <div class="data_image_flex"> 
-                    <p class="text">Facing the beach</p>
-                </div>
-                <div class="data_image_flex"> 
-                    <p class="text">Available</p>
-                </div>
-            </div>
-            <div class="data_table_flex"> 
-                <div class="data_image_flex"> 
-                    <a id="APTO-1E" value="APTO-1E" onclick="fillPlan(this);">
-                    <img class="" src="img/apartments_images/APTO-1E.png" style="width: 300px;height: 300px;">
-                </a>
-                </div>
-                <div class="data_image_flex"> 
-                    <p class="text">Facing the beach</p>
-                </div>
-                <div class="data_image_flex"> 
-                    <p class="text">Available</p>
-                </div>
-            </div>
-            <div class="data_table_flex"> 
-                <div class="data_image_flex"> 
-                    <a id="APTO-1F" value="APTO-1F" onclick="fillPlan(this);">
-                    <img class="" src="img/apartments_images/APTO-1F.png" style="width: 300px;height: 300px;">
-                </a>
-                </div>
-                <div class="data_image_flex"> 
-                    <p class="text">Facing the beach</p>
-                </div>
-                <div class="data_image_flex"> 
-                    <p class="text">Available</p>
-                </div>
-            </div>
-        </div> -->
-      
-
     </div>
-
-    <!-- <table class="data_table_flex table-striped" >
-            <tbody class="tbody1">
-            <tr>
-                <td colspan="1" class="text_align_left">Building No.</td>
-                <td id="building_select" colspan="2" >
-                    <select class="light_blue_background" onchange="sendBuilding()" style="width: 100%;" name="building" id="building">
-                </select>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="1" class="text_align_left">Apartment No.</td>
-                <td id="apartment_select" colspan="2" >
-                    <select class="light_blue_background" onchange="myFunctionFill();" style="width: 100%;" name="Apartment" id="apartment">
-                </select>
-                </td>
-            </tr>
-            <tr>
-                <th style="height: 20px;" id="cel1" COLSPAN="3"></th>
-            </tr>
-            <tr>
-                <td colspan="1" class="text_align_left">Price</td>
-                <td id="price" colspan="2"></td>
-            </tr>
-            <tr> 
-                <td class="text_align_left">Discount</td>
-                <td > <input class="light_blue_background" onkeyup="calculation()" style="width: 99%; height: 99%;  border: 1px solid black;; padding: 0px 0px 0px 0px" name="advance" id="discount" value="0"> </td>
-                <td id="total_discount"></td>
-            </td>
-            </tr>
-            <tr>
-                <td colspan="1" class="text_align_left">TOTAL CAPEX INVESTMENT</td>
-                <td id="total_investment" colspan="2" class="blue_background"></td>
-            </tr>
-            <tr>
-                <th colspan="3">PAYMENT PLAN</th>
-            </tr>
-            <tr>
-                <td colspan="1" class="text_align_left">ADVANCE %</td>
-                <td colspan="2"><input disabled class="light_blue_background"  style="width: 99%; height: 99%;  border: 1px solid black;; padding: 0px 0px 0px 0px" name="dolar_advance" id="advance_percentage" value="40"> </td>
-            </tr>
-            <tr>
-                <td colspan="1" class="text_align_left">ADVANCE $</td>
-                <td id="advance_cash" colspan="2"></td>
-            </tr>
-        
-            <tr>
-                <td colspan="1" class="text_align_left">BALANCE TO FINANCE</td>
-                <td id="balance_to_finance" colspan="2"></td>
-            </tr>	
-            <tr>
-                <td class="text_align_left">DUES</td>
-                <td class="light_blue_background">60</td>
-                <td class="blue_background">5 YEARS</td>
-            </tr>
-            <tr>
-                <td colspan="1" class="text_align_left">Interest Year</td>
-                <td colspan="2" class="blue_background">3.8%</td>
-            </tr>
-        
-            <tr>
-                <td colspan="2">MONTHLY FEE</td>
-                <td id="monthly_fee" ></td>
-            </tr>
-            </tbody>
-            </table>
-        </table>
-        <table class="data_table_flex">
-            <tbody id="tbody"class="tbody1">
-            <tr id="first" >
-                <th colspan="1" class="text_align_left">Type (Imperial / Metric)</th>
-                    <th colspan="2" >
-                        <select class="light_blue_background" onchange="myFunctionFill()" style="width: 100%;" name="metric" id="metric">
-                        </select>
-                    </th>
-                </th>
-            </tr>
-            <tr rowspan="1">
-                <th id="area_in" colspan="3" class="blue_background">Area in Meters</th>
-            </tr>
-            <tr rowspan="1">
-                <th colspan="1" class="text_align_left blue_background" >Apartment</th>
-                <td id="area_apartment" colspan="2"></td>
-            </tr>
-            <tr>
-                <th colspan="1" class="text_align_left blue_background">Terrace</th>
-                <td id="area_terrace" colspan="2"></td>
-            </tr>
-            <tr>
-                <th colspan="3" class="blue_background">Specs</th>
-            </tr>
-            <tr>
-                <th colspan="1" class="text_align_left blue_background">No. Rooms</th>
-                <td id="rooms" colspan="2"></td>
-            </tr>
-            <tr>
-                <th colspan="1" class="text_align_left blue_background">Bathrooms(s)</th>
-                <td id="bathrooms" colspan="2"></td>
-            </tr>
-            <tr>
-                <th colspan="1" class="text_align_left blue_background">Parking Space</th>
-                <td id="parking_space" colspan="2"></td>
-            </tr>
-        </tbody>
-        </table>
-        <table class="data_table_flex">
-        <tr id="area_breakdown">
-        </tr>
-        <tr>
-            <th id="cel11" class="silver_background">Room</th>
-            <th id="cel12" class="silver_background">Area in sq. m.</th>
-            <th id="cel13" class="silver_background">Area in sq. ft.</th>
-        </tr>
-        <tr>
-            <td id="cel15" >Living and Dining</td>
-            <td id="area_living_dining_m"></td>
-            <td id="area_living_dining_ft"></td>  
-        </tr>
-        <tr>
-            <td id="cel15" >Kitchen</td>
-            <td id="kitchen_m"></td>
-            <td id="kitchen_ft"></td>
-        </tr>
-        <tr>
-            <td id="cel15" >Main Bedroom</td>
-            <td id="main_bedroom_m"></td>
-            <td id="main_bedroom_ft"></td>
-        </tr>
-        <tr>
-            <td id="cel15" >Second Bedroom</td>
-            <td id="second_bedroom_m"></td>
-            <td id="second_bedroom_ft"></td>
-        </tr>
-        <tr>
-            <td id="cel15" >Third Bedroom</td>
-            <td id="third_bedroom_m"></td>
-            <td id="third_bedroom_ft"></td>
-        </tr>
-        <tr>
-            <td id="cel15" >Other Areas</td>
-            <td id="other_areas_m"></td>
-            <td id="other_areas_ft"></td>
-        </tr>
-        <tr>
-            <td id="cel15" class="silver_background blue_text" >Total Areas</td>
-            <td id="total_m" class="silver_background blue_text"></td>
-            <td id="total_ft" class="silver_background blue_text"></td>
-        </tr>
-        <tr>
-            <td colspan="3" rowspan="5">Note: Bathroom(s), Walk-in Closet(s), halls, and Laundry room are included in other areas.</td>
-        </tr>
-        </table>
-    </div> -->
 </body>
 <script>
 

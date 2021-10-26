@@ -1,5 +1,277 @@
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    background: #FFF;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+a,
+button {
+    transition: all .3s ease-in-out;
+    outline: none!important;
+}
 
-    var 
+a:hover {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn {
+    margin: 0 5px 5px 0;
+}
+
+button {
+    outline: none!important;
+}
+
+li{
+    height: 30px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+label,
+.btn,
+a {
+    font-family: "helvetica";
+    font-weight: 400;
+    color: #b5b5b5;
+}
+
+.h1 {
+    font-size: 20px;
+    font-family: "Open Sans";
+}
+
+h2 {
+    font-size: 22px;
+    line-height: 1.4em;
+}
+
+h3 {
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #333333!important;
+}
+
+
+h1 {
+    color: #333333!important;
+}
+
+@media (max-width: 991px) {
+    .container {
+        width: 100%;
+    }
+   
+}
+.table_div {
+    display: flex;
+    flex-direction: row;
+    overflow-x:scroll;
+    margin: 2% 10% 2% 10%;
+    width: 80%;
+    height: 100%;
+    
+}
+
+.image{
+    width: 450px;
+    height: 450px
+}
+
+img{
+    width: 100%;
+    height: 100%;
+}
+.data_table_flex1{
+ border-collapse: collapse;
+ width: 100%;
+}
+.data_table_flex{
+    width: 33%;
+
+
+}
+.text{
+    text-align: center;
+    margin: 0;
+    margin-top: 2%;
+}
+
+.data_image_flex{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+table{
+    width: 100%;
+    
+    }
+td , tr ,th{
+        border: 0.5px solid black;
+        }
+td {
+    text-align: center;
+}
+.text_align_left {
+    text-align: left;
+}
+
+.blue_background {
+background-color:  #007EC3;
+color: white;
+}
+.black_background{
+    background-color:black;
+    color: white;  
+} 
+
+.light_blue_background{
+   text-align: center;
+    background-color: #007EC3;
+    color: white;  
+    background-color: lighten
+}   
+.silver_background{
+    background-color:darkgrey;
+} 
+.blue_text{
+    color: #007EC3;
+    font-weight: bold;
+} 
+
+
+@media (max-width: 1200px) {
+    .image{
+        width: 350px;
+        height: 350px
+    }
+    
+    img{
+        width: 100%;
+        height: 100%;
+    }
+
+    .table_div {
+        display: flex;
+        flex-direction: column;
+        overflow-x:scroll;
+        margin: 2% 20% 2% 20%;
+        width: 60%;
+        height: 700px;
+    }
+    .data_table_flex{
+        width: 100%;
+        margin-bottom: 2%;
+    
+    }
+    .data_table_flex1{
+        border-collapse: collapse;
+        width: 100%;
+       }
+    table , tr ,th{
+        width: 100%;
+        border: 0.5px solid black;
+        }
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	tr { border: 1px solid #ccc; }
+	
+	td { 
+        display: inline-block;
+        width: 100%;
+        column-span: all;
+        border: 0.5px solid black;
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+	}
+	td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 100%; 
+		/*padding-right: 10px; */
+		white-space: nowrap;
+	}
+}
+  
+  
+
+
+</style>
+<!-- Main container -->
+    <div id="main" class="page-container">
+        <div id="pay" class="table_div">
+            <table id="payment" class="data_table_flex1 table-striped" >
+                <tbody class="tbody1">
+                <tr>
+                    <td colspan="2" class="text_align_left">BUILDING No.</td>
+                    <td colspan="2" id="building_select"  >
+                        <select class="light_blue_background" onchange="sendBuilding()" style="width: 100%;" name="building" id="building">
+                      </select>
+                    </td>
+                    <td colspan="1" class="text_align_left">FLOOR</td>
+                    <td colspan="3" id="apartment_select"  >
+                        <select class="light_blue_background" onchange="myFunctionFill(this);" style="width: 100%;" name="Apartment" id="apartment">
+                    </select>
+                    </td>
+                    <td colspan="1" class="text_align_left">PRICE</td>
+                    <td colspan="2" id="price" ></td>
+                    <td colspan="7" class="text_align_left">TOTAL CAPEX INVESTMENT</td>
+                    <td colspan="3" id="total_investment" class="blue_background"></td>
+                    
+                </tr>
+                <tr>
+                    <th colspan="19">PAYMENT PLAN</th>
+                </tr>
+                <tr>
+                    <td colspan="2" class="text_align_left">DISCOUNT</td>
+                    <td colspan="2" > <input class="light_blue_background" onkeyup="calculation(this)" style="width: 99%; height: 99%;  border: 1px solid black;; padding: 0px 0px 0px 0px" name="advance" id="discount" value="0"> </td>
+                    <td colspan="1" id="total_discount"></td>
+                    <td colspan="3" class="text_align_left">ADVANCE %</td>
+                    <td colspan="1"><input disabled class="light_blue_background"  style="width: 99%; height: 99%;  border: 1px solid black;; padding: 0px 0px 0px 0px" name="dolar_advance" id="advance_percentage" value="40"> </td>
+                    <td colspan="2" class="text_align_left">ADVANCE $</td>
+                    <td colspan="3" id="advance_cash" ></td>
+                    <td colspan="4" class="text_align_left">BALANCE TO FINANCE</td>
+                    <td colspan="3" id="balance_to_finance" ></td>
+                    
+                </tr>
+                <tr>
+                    <td colspan="2" class="text_align_left">DUES</td>
+                    <td colspan="2" class="light_blue_background">60</td>
+                    <td colspan="1" class="blue_background">5 YEARS</td>
+                    <td colspan="3" class="text_align_left">INTEREST YEAR</td>
+                    <td colspan="1" class="blue_background">3.8%</td>
+                    <td colspan="2">MONTHLY FEE</td>
+                    <td colspan="9" id="monthly_fee" ></td>
+                </tr>
+                </tbody>
+            </table>      
+        </div>
+</div>
+<script>
+
+var 
         pay = document.getElementById("pay"),
         main_cont = document.getElementById("main"),
         id_apto = null;
@@ -954,3 +1226,7 @@
     }
     myFunctionBuilding(buildingsPt, building);
 
+
+
+
+</script>
