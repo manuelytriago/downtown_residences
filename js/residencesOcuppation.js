@@ -711,7 +711,7 @@
                         const link = document.createElement("a")
                         link.id = apartments1[i].Apartment;
                         link.value = apartments1[i].Apartment;
-                        link.href="#PAYMENT";
+                        link.href="#payment";
                         link.className = "image";
                         link.onclick =function(){
                             fillPlan(this);
@@ -719,7 +719,7 @@
                         const link2 = document.createElement("a")
                         link2.id = apartments1[i].Apartment;
                         link2.value = apartments1[i].Apartment;
-                        link2.href="#PAYMENT";
+                        link2.href="#payment";
                         link2.className = "image2";
                         link2.onclick =function(){
                             fillPlan(this);
