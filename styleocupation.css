@@ -82,7 +82,7 @@ h1 {
 }
 
 .image2{
-    width: 300px;
+    width: auto;
     height: 55px;
 }
 
@@ -157,7 +157,7 @@ color: white;
 
 @media (max-width: 1200px) {
     .image2{
-        width: 350px;
+        width: auto;
         height: 105px;
     }
     .image{
