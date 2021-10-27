@@ -701,6 +701,9 @@
                         newone.className = "data_table_flex";
                         const first = document.createElement("div")
                         first.className = "data_image_flex";
+                        const proper = document.createElement("div")
+                        proper.className = "data_image_flex image2";
+                        proper.style.marginTop = "2%"
                         const second = document.createElement("div")
                         second.className = "data_image_flex";
                         const third = document.createElement("div")
@@ -713,16 +716,33 @@
                         link.onclick =function(){
                             fillPlan(this);
                         }
-
+                        const link2 = document.createElement("a")
+                        link2.id = apartments1[i].Apartment;
+                        link2.value = apartments1[i].Apartment;
+                        link2.href="#PAYMENT";
+                        link2.className = "image2";
+                        link2.onclick =function(){
+                            fillPlan(this);
+                        }
+                        
                         const image = document.createElement("img")
                         //image.src = "//img1.wsimg.com/isteam/ip/6306d63f-c18a-41b6-b82a-c1a90cd2a78a/" + apartments1[i].Apartment + ".png";
-                        image.src = "img/replantas3d/" + apartments1[i].Apartment + ".png"
+                        image.src = "img/apto/" + apartments1[i].Apartment + ".png"
                         image.id = "apartment_image"+apartments1[i].Apartment;
+                        const image2 = document.createElement("img")
+                        //image.src = "//img1.wsimg.com/isteam/ip/6306d63f-c18a-41b6-b82a-c1a90cd2a78a/" + apartments1[i].Apartment + ".png";
+                        image2.src = "img/replantas3d/" + apartments1[i].Apartment + ".png"
+                        image2.id = "replantas3d"+apartments1[i].Apartment;
                         const faceapto = document.createElement("p")
                         faceapto.className = "text";
                         faceapto.id = "facing"
                         faceapto.value = "facing"+apartments1[i].Facing;
-                        faceapto.innerHTML = apartments1[i].Facing
+                        var name = apartments1[i].Apartment;
+                        faceapto.innerHTML = name.slice(5)+" "+apartments1[i].Facing;
+                        const name_apto = document.createElement("h1")
+                        name_apto.className = "col-12 text";
+                        name_apto.value = name.slice(5);
+                        name_apto.innerHTML = name.slice(5);
                         const statusapto = document.createElement("p")
                         statusapto.className = "text";
                         statusapto.id = "status"+apartments1[i].Available;
@@ -735,22 +755,30 @@
                           "Sold" == apartments1[i].Available && (statusapto.style.backgroundColor = "Red")
                           "Reserved" == apartments1[i].Available && (statusapto.style.backgroundColor = "Orange")
                         if (cont <=3){
+                            newone.appendChild(name_apto);
                             principal.appendChild(newone)
                             newone.appendChild(first)
+                            newone.appendChild(proper)
                             newone.appendChild(second)
                             newone.appendChild(third)
                             first.appendChild(link)
+                            proper.appendChild(link2)
                             link.appendChild(image)
+                            link2.appendChild(image2)
                             second.appendChild(faceapto)
                             third.appendChild(statusapto)
                         }
                         if (cont > 3){
+                            newone.appendChild(name_apto);
                             secondary.appendChild(newone)
                             newone.appendChild(first)
+                            newone.appendChild(proper)
                             newone.appendChild(second)
                             newone.appendChild(third)
                             first.appendChild(link)
+                            proper.appendChild(link2)
                             link.appendChild(image)
+                            link2.appendChild(image2)
                             second.appendChild(faceapto)
                             third.appendChild(statusapto)
                         }
