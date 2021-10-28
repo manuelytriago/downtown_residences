@@ -87,8 +87,19 @@ h1 {
 }
 
 .image{
+    position: relative;
     width: 400px;
     height: 400px;
+   
+    
+}
+.sold {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    bottom: 0px;
+    left: 0px;
 }
 
 img{

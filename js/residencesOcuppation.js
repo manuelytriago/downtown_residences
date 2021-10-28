@@ -719,32 +719,6 @@
                         link2.value = apartments1[i].Apartment;
                         link2.href="#payment";
                         link2.className = "image2";
-                        if (apartments1[i].Available =="Sold"){
-                            link2.onclick =function(){
-                                alert("This apartment is Sold you can have a plan for this");
-                            }
-                            link.onclick =function(){
-                                alert("This apartment is Sold you can have a plan for this");
-                            }
-                        }
-                        if (apartments1[i].Available =="Reserved" ){  
-                            link2.onclick =function(){
-                            alert("This apartment is Sold you can have a plan for this");
-                        }
-                        link.onclick =function(){
-                            alert("This apartment is Reserved you can have a plan for this");
-                        }
-                        }
-                        if (apartments1[i].Available =="Available" ){  
-                            link2.onclick =function(){
-                                fillPlan(this);
-                            }
-                            link.onclick =function(){
-                                fillPlan(this);
-                            }
-                        }
-                        
-                        
                         const image = document.createElement("img")
                         //image.src = "//img1.wsimg.com/isteam/ip/6306d63f-c18a-41b6-b82a-c1a90cd2a78a/" + apartments1[i].Apartment + ".png";
                         image.src = "img/apto/" + apartments1[i].Apartment + ".png"
@@ -771,36 +745,60 @@
                         statusapto.style.opacity = "75%" ;
                         statusapto.style.width = "90%" ;
                         statusapto.style.borderRadius = "20px" ;
-                        "Available" == apartments1[i].Available && (statusapto.style.backgroundColor = "Green")
-                          "Sold" == apartments1[i].Available && (statusapto.style.backgroundColor = "Red")
-                          "Reserved" == apartments1[i].Available && (statusapto.style.backgroundColor = "Orange")
-                        if (cont <=3){
-                            newone.appendChild(name_apto);
-                            principal.appendChild(newone)
-                            newone.appendChild(first)
-                            newone.appendChild(proper)
-                            newone.appendChild(second)
-                            newone.appendChild(third)
-                            first.appendChild(link)
-                            proper.appendChild(link2)
-                            link.appendChild(image)
-                            link2.appendChild(image2)
-                            second.appendChild(faceapto)
+                        const cover = document.createElement("img")
+                        cover.id = apartments1[i].Apartment;
+                        if ("Available" == apartments1[i].Available) {
+                        
                             third.appendChild(statusapto)
+                            statusapto.style.backgroundColor = "Green"
+                            link2.onclick =function(){
+                                fillPlan(this);
+                            },
+                            link.onclick =function(){
+                                fillPlan(this);
+                            }
+                            
+                        } 
+                        if ("Sold" == apartments1[i].Available ){
+                            cover.src = "img/apto/Sold.png"
+                            cover.value = apartments1[i].Apartment;
+                            cover.href="#payment";
+                            cover.className = "sold ";
+                            link.appendChild(cover);
+                            link2.onclick =function(){
+                                alert("This apartment is Sold you can have a plan for this");
+                            }
+                            link.onclick =function(){
+                                alert("This apartment is Sold you can have a plan for this");
+                            }
+                        } 
+                        if ("Reserved" == apartments1[i].Available){
+
+                            third.appendChild(statusapto)
+                            statusapto.style.backgroundColor = "Orange"
+                            link2.onclick =function(){
+                                alert("This apartment is Sold you can have a plan for this");
+                            }
+                            link.onclick =function(){
+                                alert("This apartment is Reserved you can have a plan for this");
+                            }
+                         } 
+                         newone.appendChild(name_apto);
+                         newone.appendChild(first)
+                         newone.appendChild(proper)
+                         newone.appendChild(second)
+                         newone.appendChild(third)
+                         first.appendChild(link)
+                         proper.appendChild(link2)
+                         link.appendChild(image)
+                         link2.appendChild(image2)
+                         second.appendChild(faceapto)
+
+                        if (cont <=3){
+                            principal.appendChild(newone)    
                         }
                         if (cont > 3){
-                            newone.appendChild(name_apto);
                             secondary.appendChild(newone)
-                            newone.appendChild(first)
-                            newone.appendChild(proper)
-                            newone.appendChild(second)
-                            newone.appendChild(third)
-                            first.appendChild(link)
-                            proper.appendChild(link2)
-                            link.appendChild(image)
-                            link2.appendChild(image2)
-                            second.appendChild(faceapto)
-                            third.appendChild(statusapto)
                         }
                        
                     } 
