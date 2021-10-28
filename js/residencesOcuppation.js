@@ -885,7 +885,7 @@
         for (var i = 0; i < array.length; i++) {
             var opt, opt;
             if(0 != i){
-                (((opt = document.createElement("option")).value = array[i].Floor.toUpperCase()), (opt.innerHTML = array[i].Floor.toUpperCase()), element.appendChild(opt))
+                (((opt = document.createElement("option")).value = array[i].Floor), (opt.innerHTML = array[i].Floor.toUpperCase()), element.appendChild(opt))
                
             }else{
             (((opt = document.createElement("option")).value = array[i].Selector.toUpperCase()), (opt.innerHTML = array[i].Selector.toUpperCase()), element.appendChild(opt));
