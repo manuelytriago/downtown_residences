@@ -713,17 +713,36 @@
                         link.value = apartments1[i].Apartment;
                         link.href="#payment";
                         link.className = "image";
-                        link.onclick =function(){
-                            fillPlan(this);
-                        }
                         const link2 = document.createElement("a")
                         link2.id = apartments1[i].Apartment;
                         link2.value = apartments1[i].Apartment;
                         link2.href="#payment";
                         link2.className = "image2";
-                        link2.onclick =function(){
-                            fillPlan(this);
+                        if (apartments1[i].Available =="Sold"){
+                            link2.onclick =function(){
+                                alert("This apartment is Sold you can have a plan for this");
+                            }
+                            link.onclick =function(){
+                                alert("This apartment is Sold you can have a plan for this");
+                            }
                         }
+                        if (apartments1[i].Available =="Reserved" ){  
+                            link2.onclick =function(){
+                            alert("This apartment is Sold you can have a plan for this");
+                        }
+                        link.onclick =function(){
+                            alert("This apartment is Reserved you can have a plan for this");
+                        }
+                        }
+                        if (apartments1[i].Available =="Available" ){  
+                            link2.onclick =function(){
+                                fillPlan(this);
+                            }
+                            link.onclick =function(){
+                                fillPlan(this);
+                            }
+                        }
+                        
                         
                         const image = document.createElement("img")
                         //image.src = "//img1.wsimg.com/isteam/ip/6306d63f-c18a-41b6-b82a-c1a90cd2a78a/" + apartments1[i].Apartment + ".png";
@@ -787,13 +806,13 @@
 
                 }
             }
-    
     }
     function clear_tables() {
         const info = document.getElementById("info");
         const other = document.getElementById("other");
         const half = document.getElementById("half");
         (document.getElementById("price").value = ""),
+            (document.getElementById("plan").innerHTML = "PAYMENT PLAN"),
             (document.getElementById("price").innerHTML = ""),
             (document.getElementById("price").style.backgroundColor = "unset"),
             (document.getElementById("advance_cash").value = ""),
@@ -884,10 +903,20 @@
             5 == answer && myFunctionAp(buildingsfloors, floor),
             6 == answer && myFunctionAp(buildingsfloors, floor);
     }
-    function calculation() {
+    function calculation() 
+    {
         let percentage = document.getElementById("advance_percentage").value,
+            plan = document.getElementById("plan"),
             apt_discount = (document.getElementById("discount").value * document.getElementById("price").value) / 100,
             price_new = document.getElementById("price").value - apt_discount;
+            console.log(plan.innerHTML);
+            if(plan.innerHTML != "PAYMENT PLAN"){
+                plan.innerHTML = "";
+                plan.innerHTML = "PAYMENT PLAN "+id_apto;
+            }else{
+                plan.innerHTML += " "+id_apto;
+            }
+           
         if ("Select Building" != document.getElementById("building").value && "Select Apartment" != document.getElementById("apartment").value)
             if (document.getElementById("discount").value >= 0 && document.getElementById("discount").value <= 15 && document.getElementById("discount").value >= "") {
                 if (null != document.getElementById("price").value && "" != document.getElementById("price").value)
