@@ -679,6 +679,7 @@
                         const secondary = document.createElement("div")
                         secondary.id = "other"
                         secondary.className = "table_div";
+                        secondary.style = "flex-direction: row-reverse"
                         main_cont.appendChild(secondary)
                         const last_div = document.createElement("div")
                             last_div.id = "info"
