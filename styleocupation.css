@@ -189,6 +189,10 @@ color: white;
 
 
 @media (max-width:576px) {
+    .data_table_flex{
+        border-width: 1px;
+    
+    }
     .image2{
         width: auto;
         height: 25px;
