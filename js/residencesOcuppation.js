@@ -766,10 +766,10 @@
                             cover.className = "sold ";
                             link.appendChild(cover);
                             link2.onclick =function(){
-                                alert("This apartment is Sold you can have a plan for this");
+                                alert("Apartment is Sold");
                             }
                             link.onclick =function(){
-                                alert("This apartment is Sold you can have a plan for this");
+                                alert("Apartment is Sold");
                             }
                         } 
                         if ("Reserved" == apartments1[i].Available){
@@ -777,10 +777,10 @@
                             third.appendChild(statusapto)
                             statusapto.style.backgroundColor = "Orange"
                             link2.onclick =function(){
-                                alert("This apartment is Sold you can have a plan for this");
+                                alert("Apartment is Reserved");
                             }
                             link.onclick =function(){
-                                alert("This apartment is Reserved you can have a plan for this");
+                                alert("Apartment is Reserved");
                             }
                          } 
                          newone.appendChild(name_apto);
