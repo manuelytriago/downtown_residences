@@ -1,11 +1,4 @@
-body {
-    margin: 0;
-    padding: 0;
-    background: #FFF;
-    overflow-x: hidden;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
+
 a,
 button {
     transition: all .3s ease-in-out;
@@ -109,6 +102,7 @@ img{
 .data_table_flex1{
  border-collapse: collapse;
  width: 100%;
+ height: 100px;
 }
 .data_table_flex{
     width: 33%;
@@ -204,16 +198,6 @@ color: white;
 }
 
 @media (max-width:992px) {
-   
-    /*.image2{
-        width: auto;
-        height: 105px;
-    }
-    .image{
-        width: 400px;
-        height: 400px;
-    }*/
-    
     img{
         width: 100%;
         height: 100%;
@@ -236,13 +220,12 @@ color: white;
     .data_table_flex1{
         border-collapse: collapse;
         width: 100%;
+        height: 100px;
        }
     table , tr ,th{
         width: 100%;
         border: 0.5px solid black;
         }
-	
-	/* Hide table headers (but not display: none;, for accessibility) */
 	thead tr { 
 		position: absolute;
 		top: -9999px;
@@ -256,21 +239,15 @@ color: white;
         width: 100%;
         column-span: all;
         border: 0.5px solid black;
-		/* Behave  like a "row" */
 		border: none;
 		border-bottom: 1px solid #eee; 
 		position: relative;
 	}
 	td:before { 
-		/* Now like a table header */
 		position: absolute;
-		/* Top/left values mimic padding */
 		top: 6px;
 		left: 6px;
 		width: 100%; 
-		/*padding-right: 10px; */
 		white-space: nowrap;
 	}
 }
-  
-  

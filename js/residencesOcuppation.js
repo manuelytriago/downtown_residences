@@ -1,4 +1,3 @@
-
     var 
         pay = document.getElementById("pay"),
         main_cont = document.getElementById("main"),
@@ -712,20 +711,16 @@
                         const link = document.createElement("a")
                         link.id = apartments1[i].Apartment;
                         link.value = apartments1[i].Apartment;
-                        link.href="#payment";
                         link.className = "image";
                         const link2 = document.createElement("a")
                         link2.id = apartments1[i].Apartment;
                         link2.value = apartments1[i].Apartment;
-                        link2.href="#payment";
                         link2.className = "image2";
                         const image = document.createElement("img")
-                        //image.src = "//img1.wsimg.com/isteam/ip/6306d63f-c18a-41b6-b82a-c1a90cd2a78a/" + apartments1[i].Apartment + ".png";
-                        image.src = "img/apto/" + apartments1[i].Apartment + ".png"
+                        image.src = "//img1.wsimg.com/isteam/ip/6306d63f-c18a-41b6-b82a-c1a90cd2a78a/" + apartments1[i].Apartment + ".png";
                         image.id = "apartment_image"+apartments1[i].Apartment;
                         const image2 = document.createElement("img")
-                        //image.src = "//img1.wsimg.com/isteam/ip/6306d63f-c18a-41b6-b82a-c1a90cd2a78a/" + apartments1[i].Apartment + ".png";
-                        image2.src = "img/replantas3d/" + apartments1[i].Apartment + ".png"
+                        image2.src = "//img1.wsimg.com/isteam/ip/6306d63f-c18a-41b6-b82a-c1a90cd2a78a/" + apartments1[i].Apartment+"-1"+".png";
                         image2.id = "replantas3d"+apartments1[i].Apartment;
                         const faceapto = document.createElement("p")
                         faceapto.className = "text";
@@ -760,9 +755,8 @@
                             
                         } 
                         if ("Sold" == apartments1[i].Available ){
-                            cover.src = "img/apto/Sold.png"
+                            cover.src = "//img1.wsimg.com/isteam/ip/6306d63f-c18a-41b6-b82a-c1a90cd2a78a/Sold.png"
                             cover.value = apartments1[i].Apartment;
-                            cover.href="#payment";
                             cover.className = "sold ";
                             link.appendChild(cover);
                             link2.onclick =function(){
@@ -911,9 +905,9 @@
             console.log(plan.innerHTML);
             if(plan.innerHTML != "PAYMENT PLAN"){
                 plan.innerHTML = "";
-                plan.innerHTML = "PAYMENT PLAN "+id_apto;
+                plan.innerHTML = "PAYMENT PLAN "+"BUILDING "+document.getElementById("building").value+" "+id_apto;
             }else{
-                plan.innerHTML += " "+id_apto;
+                plan.innerHTML = "PAYMENT PLAN "+"BUILDING "+document.getElementById("building").value+" "+id_apto;
             }
            
         if ("Select Building" != document.getElementById("building").value && "Select Apartment" != document.getElementById("apartment").value)
@@ -1009,4 +1003,3 @@
                 alert("You need to select a building and an apartment"));
     }
     myFunctionBuilding(buildingsPt, building);
-
